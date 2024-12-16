@@ -1,0 +1,30 @@
+# API Keys
+mistral_api_key: ${MISTRAL_API_KEY}
+
+# File paths
+data_folder: "data"
+articles_file: "articles.json"
+url_file: "url.md"
+
+# Translation settings
+translator:
+  source: "auto"
+  target: "en"
+  delay: 1
+
+# Mistral AI settings
+mistral:
+  model: "mistral-large-latest"
+  prompt_template: |
+    Based on this article content, please provide:
+    1. A concise title (max 10 words)
+    2. A brief summary (max 50 words)
+    3. A single category that best describes the article (e.g., Politics, Technology, Economy, etc.)
+
+    Format your response exactly like this:
+    TITLE: [your title]
+    SUMMARY: [your summary]
+    CATEGORY: [your category]
+
+    Article content:
+    {content}

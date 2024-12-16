@@ -9,14 +9,25 @@ from mistralai import Mistral
 from mistralai.models import UserMessage
 import asyncio
 from dotenv import load_dotenv
+import yaml
 
 # Load environment variables
 load_dotenv()
 
+def load_config():
+    """Load configuration from yaml file"""
+    with open('config.yaml', 'r') as f:
+        config = yaml.safe_load(f)
+        # Replace environment variables
+        config['mistral_api_key'] = os.getenv(config['mistral_api_key'].replace('${', '').replace('}', ''))
+    return config
+
+CONFIG = load_config()
+
 def create_data_folder():
     """Create a data folder if it doesn't exist"""
-    if not os.path.exists('data'):
-        os.makedirs('data')
+    if not os.path.exists(CONFIG['data_folder']):
+        os.makedirs(CONFIG['data_folder'])
 
 def clean_html(html_text):
     """Remove HTML tags and clean the text"""
@@ -44,25 +55,12 @@ def save_articles(articles, filename):
 
 async def get_ai_analysis(content):
     """Get AI-generated title, summary, and category"""
-    api_key = os.getenv("MISTRAL_API_KEY")
-    model = "mistral-large-latest"
-    client = Mistral(api_key=api_key)
+    client = Mistral(api_key=CONFIG['mistral_api_key'])
 
-    prompt = f"""Based on this article content, please provide:
-1. A concise title (max 10 words)
-2. A brief summary (max 50 words)
-3. A single category that best describes the article (e.g., Politics, Technology, Economy, etc.)
-
-Format your response exactly like this:
-TITLE: [your title]
-SUMMARY: [your summary]
-CATEGORY: [your category]
-
-Article content:
-{content}"""
+    prompt = CONFIG['mistral']['prompt_template'].format(content=content)
 
     chat_response = await client.chat.complete_async(
-        model=model,
+        model=CONFIG['mistral']['model'],
         messages=[UserMessage(content=prompt)],
     )
     
@@ -85,7 +83,7 @@ Article content:
 
 async def fetch_and_translate_feeds(url_file):
     """Fetch articles from RSS feeds and translate them"""
-    filename = 'data/articles.json'
+    filename = os.path.join(CONFIG['data_folder'], CONFIG['articles_file'])
     
     existing_urls = load_existing_articles(filename)
     articles = []
@@ -99,6 +97,11 @@ async def fetch_and_translate_feeds(url_file):
     
     with open(url_file, 'r') as file:
         urls = [line.strip() for line in file if line.strip()]
+    
+    translator = GoogleTranslator(
+        source=CONFIG['translator']['source'],
+        target=CONFIG['translator']['target']
+    )
     
     for url in urls:
         try:
@@ -115,9 +118,6 @@ async def fetch_and_translate_feeds(url_file):
                 # Extract and clean content
                 original_title = clean_html(latest_entry.get('title', ''))
                 original_description = clean_html(latest_entry.get('description', ''))
-                
-                # Translate content to English
-                translator = GoogleTranslator(source='auto', target='en')
                 
                 try:
                     translated_title = translator.translate(original_title)
@@ -147,7 +147,7 @@ async def fetch_and_translate_feeds(url_file):
                 save_articles(articles, filename)
                 
                 print(f"Processed and saved: {url}")
-                time.sleep(1)
+                time.sleep(CONFIG['translator']['delay'])
             
         except Exception as e:
             print(f"Error processing {url}: {str(e)}")
@@ -156,7 +156,7 @@ async def fetch_and_translate_feeds(url_file):
 
 async def main():
     create_data_folder()
-    filename = await fetch_and_translate_feeds('url.md')
+    filename = await fetch_and_translate_feeds(CONFIG['url_file'])
     print(f"Articles saved to {filename}")
 
 if __name__ == "__main__":
