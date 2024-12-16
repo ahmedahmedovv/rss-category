@@ -25,7 +25,9 @@ jobs:
         pip install -r requirements.txt
 
     - name: Create logs directory
-      run: mkdir -p logs
+      run: |
+        mkdir -p logs
+        touch logs/.gitkeep
 
     - name: Run RSS processor
       env:

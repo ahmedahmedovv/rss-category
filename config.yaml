@@ -41,4 +41,4 @@ mistral:
 logging:
   level: "INFO"
   format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-  file: "app.log"
+  file: "logs/app.log"
