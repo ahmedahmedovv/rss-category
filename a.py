@@ -11,9 +11,13 @@ import yaml
 import os
 from supabase import create_client, Client
 from typing import List, Dict, Any
+from logger_config import setup_logger
 
 # Load environment variables
 load_dotenv()
+
+# Add at the top after imports
+logger = setup_logger('article_processor')
 
 def load_config():
     """Load configuration from yaml file"""
@@ -90,6 +94,7 @@ async def get_ai_analysis(content):
 async def fetch_and_translate_feeds(url_file):
     """Fetch articles from RSS feeds and translate them"""
     existing_urls = load_existing_articles()
+    logger.info(f"Starting to process feeds from {url_file}")
     
     with open(url_file, 'r') as file:
         urls = [line.strip() for line in file if line.strip()]
@@ -102,6 +107,7 @@ async def fetch_and_translate_feeds(url_file):
     for url in urls:
         try:
             feed = feedparser.parse(url)
+            logger.info(f"Processing feed: {url}")
             
             # Get the last 2 entries instead of just the first one
             latest_entries = feed.entries[:CONFIG['feed']['entries_to_fetch']]
@@ -110,7 +116,7 @@ async def fetch_and_translate_feeds(url_file):
                 article_url = latest_entry.get('link', '')
                 
                 if article_url in existing_urls:
-                    print(f"Skipping (already exists): {article_url}")
+                    logger.debug(f"Skipping (already exists): {article_url}")
                     continue
                 
                 # Extract and clean content
@@ -144,11 +150,11 @@ async def fetch_and_translate_feeds(url_file):
                 
                 # Save to Supabase
                 save_article(article)
-                print(f"Processed and saved: {url}")
+                logger.info(f"Successfully processed and saved article: {article_url}")
                 time.sleep(CONFIG['translator']['delay'])
             
         except Exception as e:
-            print(f"Error processing {url}: {str(e)}")
+            logger.error(f"Error processing {url}: {str(e)}", exc_info=True)
 
 async def main():
     await fetch_and_translate_feeds(CONFIG['url_file'])

@@ -4,6 +4,7 @@ from datetime import datetime
 import pytz
 import tempfile
 import os
+from logger_config import setup_logger
 
 # Initialize Supabase client
 supabase: Client = create_client(
@@ -11,18 +12,24 @@ supabase: Client = create_client(
     'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ5ZmVlY2ZzbnZqYW5oemFvanZxIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTczNDM0MDExNywiZXhwIjoyMDQ5OTE2MTE3fQ.cBjja9V92dT0-QYmNfIXEgCU00vE91ZXEetTyc-dmBM'
 )
 
+# Add at the top after imports
+logger = setup_logger('rss_generator')
+
 def load_articles_from_supabase():
     """Load articles from Supabase database"""
     try:
+        logger.info("Loading articles from Supabase")
         response = supabase.table('articles').select('*').execute()
+        logger.info(f"Successfully loaded {len(response.data)} articles")
         return response.data
     except Exception as e:
-        print(f"Error loading articles from Supabase: {str(e)}")
+        logger.error(f"Error loading articles from Supabase: {str(e)}", exc_info=True)
         return []
 
 def upload_to_supabase_storage(feed_content: str, filename: str):
     """Upload RSS feed content to Supabase storage"""
     try:
+        logger.info(f"Uploading {filename} to Supabase storage")
         # Create a temporary file with UTF-8 encoding
         with tempfile.NamedTemporaryFile(mode='w+', delete=False, suffix='.xml', encoding='utf-8') as tmp_file:
             # Write content to temporary file
@@ -38,14 +45,14 @@ def upload_to_supabase_storage(feed_content: str, filename: str):
                     file=f,
                     file_options={"content-type": "application/xml; charset=utf-8"}
                 )
-            print(f"Successfully uploaded {filename} to Supabase storage")
+            logger.info(f"Successfully uploaded {filename}")
             return response
         finally:
             # Clean up: remove temporary file
             os.unlink(tmp_path)
             
     except Exception as e:
-        print(f"Error uploading to Supabase storage: {str(e)}")
+        logger.error(f"Error uploading to Supabase storage: {str(e)}", exc_info=True)
         return None
 
 def create_category_feeds(articles):

@@ -1,0 +1,58 @@
+2024-12-16 13:22:46,787 - main - INFO - Starting article processing...
+2024-12-16 13:22:47,215 - article_processor - INFO - Starting to process feeds from url.md
+2024-12-16 13:22:47,582 - article_processor - INFO - Processing feed: https://notesfrompoland.com/feed/
+2024-12-16 13:22:47,841 - article_processor - INFO - Processing feed: https://politepol.com/fd/b8Ymwy4PRsNS.xml
+2024-12-16 13:22:48,101 - article_processor - INFO - Processing feed: https://politepol.com/fd/aN6R8Je2fUr5.xml
+2024-12-16 13:22:48,392 - article_processor - INFO - Processing feed: https://politepol.com/fd/1jNMAkmHDN1t.xml
+2024-12-16 13:22:48,686 - article_processor - INFO - Processing feed: https://politepol.com/fd/21fLEtcxQnMj.xml
+2024-12-16 13:22:48,955 - article_processor - INFO - Processing feed: https://politepol.com/fd/eQQIMEUlFKuU.xml
+2024-12-16 13:22:49,229 - article_processor - INFO - Processing feed: https://politepol.com/fd/o3jNxZcrpo6w.xml
+2024-12-16 13:22:49,496 - article_processor - INFO - Processing feed: https://politepol.com/fd/3F3XvYFg1X1A.xml
+2024-12-16 13:22:49,781 - article_processor - INFO - Processing feed: https://politepol.com/fd/TWSNDgA2UrNC.xml
+2024-12-16 13:22:50,065 - article_processor - INFO - Processing feed: https://politepol.com/fd/vyPArJmbermO.xml
+2024-12-16 13:22:50,322 - article_processor - INFO - Processing feed: https://politepol.com/fd/M0YpTDNrnk8x.xml
+2024-12-16 13:22:50,581 - article_processor - INFO - Processing feed: https://politepol.com/fd/2oeBhN2Jpeze.xml
+2024-12-16 13:22:50,858 - article_processor - INFO - Processing feed: https://politepol.com/fd/Fltoq0tmu5kT.xml
+2024-12-16 13:22:51,113 - article_processor - INFO - Processing feed: https://cyberdefence24.pl/_rss
+2024-12-16 13:22:51,383 - article_processor - INFO - Processing feed: https://defence24.pl/_RSS
+2024-12-16 13:22:51,604 - article_processor - INFO - Processing feed: https://defence24.com/_rss
+2024-12-16 13:22:51,847 - article_processor - INFO - Processing feed: https://infosecurity24.pl/_rss
+2024-12-16 13:22:52,113 - article_processor - INFO - Processing feed: https://politepol.com/fd/yMSQPMdW0A9d.xml
+2024-12-16 13:22:52,392 - article_processor - INFO - Processing feed: https://politepol.com/fd/lcvYRMYRE3w6.xml
+2024-12-16 13:22:52,681 - article_processor - INFO - Processing feed: https://politepol.com/fd/AaRUDelNy6uI
+2024-12-16 13:22:52,971 - article_processor - INFO - Processing feed: https://politepol.com/fd/RlZWWeOugzID
+2024-12-16 13:22:53,244 - article_processor - INFO - Processing feed: https://politepol.com/fd/QQ8y0MnyJ0Ps
+2024-12-16 13:22:53,536 - article_processor - INFO - Processing feed: https://politepol.com/fd/iYfzPnaF5k65
+2024-12-16 13:22:53,846 - article_processor - INFO - Processing feed: https://en.bbn.gov.pl/dokumenty/rss/3-rss-1.rss
+2024-12-16 13:22:54,134 - article_processor - INFO - Processing feed: https://politepol.com/fd/iv5sCQcuO3FS.xml
+2024-12-16 13:22:54,422 - article_processor - INFO - Processing feed: https://politepol.com/fd/MwtfzNppMdxB.xml
+2024-12-16 13:22:54,754 - article_processor - INFO - Processing feed: https://politepol.com/fd/CXRVrjJo0Hke.xml
+2024-12-16 13:22:55,061 - article_processor - INFO - Processing feed: https://politepol.com/fd/KLAJSBnC3xN9
+2024-12-16 13:22:55,389 - article_processor - INFO - Processing feed: https://politepol.com/fd/hNhzL30PEO6F
+2024-12-16 13:22:55,664 - article_processor - INFO - Processing feed: https://politepol.com/fd/TrPmJjWZRYMt
+2024-12-16 13:22:55,936 - article_processor - INFO - Processing feed: https://politepol.com/fd/IsSOz2U7LAph.xml
+2024-12-16 13:22:56,348 - article_processor - INFO - Processing feed: https://politepol.com/fd/9thDHqAHZGjx.xml
+2024-12-16 13:23:10,584 - article_processor - INFO - Processing feed: https://politepol.com/fd/ZCxuP2YN7S3A.xml
+2024-12-16 13:23:13,359 - article_processor - INFO - Successfully processed and saved article: https://forsal.pl/kraj/bezpieczenstwo/artykuly/9688656,tajemnicze-slowa-tuska-slyszac-sam-pomysl-rosjanie-wpadli-w-furie.html
+2024-12-16 13:23:14,812 - article_processor - INFO - Processing feed: https://politepol.com/fd/vz8QmzNtATRF
+2024-12-16 13:23:15,056 - article_processor - INFO - Processing feed: https://www.wnp.pl/rss/serwis_rss_13.xml
+2024-12-16 13:23:15,686 - article_processor - INFO - Processing feed: https://dziennikzbrojny.pl/rss
+2024-12-16 13:23:16,501 - article_processor - INFO - Processing feed: https://politepol.com/fd/W3LsgnhkgSuX.xml
+2024-12-16 13:23:21,909 - article_processor - INFO - Successfully processed and saved article: https://polska-zbrojna.pl/home/articleshow/42948?t=Kolejni-ochotnicy-w-8-Kujawsko-Pomorskiej-Brygadzie-OT
+2024-12-16 13:23:23,207 - article_processor - INFO - Processing feed: https://www.bbn.gov.pl/dokumenty/rss/1-rss-o-2.rss
+2024-12-16 13:23:23,857 - article_processor - INFO - Processing feed: https://www.hsw.pl/feed/
+2024-12-16 13:23:29,865 - article_processor - INFO - Processing feed: https://politepol.com/fd/CGvZ0xwzWc9F.xml
+2024-12-16 13:23:32,955 - article_processor - INFO - Successfully processed and saved article: https://www.pap.pl/aktualnosci/narodowy-dzien-pamieci-rewolty-grudniowej-1970-propozycja-ministry-kultury
+2024-12-16 13:23:34,172 - article_processor - INFO - Processing feed: https://www.bankier.pl/rss/wiadomosci.xml
+2024-12-16 13:23:34,672 - article_processor - INFO - Processing feed: http://rss.dziennik.pl/Dziennik-PL/
+2024-12-16 13:23:34,966 - article_processor - INFO - Processing feed: https://forsal.pl/.feed
+2024-12-16 13:23:35,493 - article_processor - INFO - Processing feed: http://rss.gazetaprawna.pl/GazetaPrawna
+2024-12-16 13:23:35,811 - article_processor - INFO - Processing feed: https://www.rp.pl/rss/1019
+2024-12-16 13:23:36,120 - article_processor - INFO - Processing feed: https://www.rp.pl/rss/11-kraj
+2024-12-16 13:23:37,017 - article_processor - INFO - Processing feed: https://feeds.feedburner.com/wPolitycepl
+2024-12-16 13:23:37,295 - article_processor - INFO - Processing feed: https://tvn24.pl/najnowsze.xml
+2024-12-16 13:23:37,567 - article_processor - INFO - Processing feed: https://www.newsweek.pl/rss.xml
+2024-12-16 13:23:38,465 - article_processor - INFO - Processing feed: https://www.polsatnews.pl/rss/wszystkie.xml
+2024-12-16 13:23:41,955 - article_processor - INFO - Successfully processed and saved article: https://www.polsatnews.pl/wiadomosc/2024-12-16/masz-tylko-kilka-dni-na-wplate-ktora-zwroci-ci-prawie-3-tys-zlotych-to-ostatni-moment-by-skorzystac/
+2024-12-16 13:23:43,221 - article_processor - INFO - Processing feed: https://www.polsatnews.pl/rss/kraj.xml
+2024-12-16 13:23:45,862 - article_processor - INFO - Successfully processed and saved article: https://www.polsatnews.pl/wiadomosc/2024-12-16/kobieta-potracona-przez-dwa-samochody-tragiczny-wypadek-na-pomorzu/

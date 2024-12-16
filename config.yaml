@@ -43,3 +43,9 @@ mistral:
 
     Article content:
     {content}
+
+# Logging configuration
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "app.log"
