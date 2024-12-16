@@ -56,3 +56,103 @@
 2024-12-16 13:23:41,955 - article_processor - INFO - Successfully processed and saved article: https://www.polsatnews.pl/wiadomosc/2024-12-16/masz-tylko-kilka-dni-na-wplate-ktora-zwroci-ci-prawie-3-tys-zlotych-to-ostatni-moment-by-skorzystac/
 2024-12-16 13:23:43,221 - article_processor - INFO - Processing feed: https://www.polsatnews.pl/rss/kraj.xml
 2024-12-16 13:23:45,862 - article_processor - INFO - Successfully processed and saved article: https://www.polsatnews.pl/wiadomosc/2024-12-16/kobieta-potracona-przez-dwa-samochody-tragiczny-wypadek-na-pomorzu/
+2024-12-16 13:58:20,844 - main - INFO - Starting article processing...
+2024-12-16 13:58:21,401 - article_processor - INFO - Starting to process feeds from url.md
+2024-12-16 13:58:21,685 - article_processor - INFO - Processing feed: https://notesfrompoland.com/feed/
+2024-12-16 13:58:21,985 - article_processor - INFO - Processing feed: https://politepol.com/fd/b8Ymwy4PRsNS.xml
+2024-12-16 13:58:24,341 - article_processor - INFO - Successfully processed and saved article: https://www.polskieradio.pl/395/7786/Artykul/3459779,polish-mayonnaise-conquers-international-markets-producer-expands-production
+2024-12-16 13:58:25,596 - article_processor - INFO - Processing feed: https://politepol.com/fd/aN6R8Je2fUr5.xml
+2024-12-16 13:58:25,866 - article_processor - INFO - Processing feed: https://politepol.com/fd/1jNMAkmHDN1t.xml
+2024-12-16 13:58:27,265 - article_processor - INFO - Processing feed: https://politepol.com/fd/21fLEtcxQnMj.xml
+2024-12-16 13:58:29,715 - article_processor - INFO - Successfully processed and saved article: https://www.polskieradio.pl/395/7786/Artykul/3459779,polish-mayonnaise-conquers-international-markets-producer-expands-production
+2024-12-16 13:58:31,303 - article_processor - INFO - Processing feed: https://politepol.com/fd/eQQIMEUlFKuU.xml
+2024-12-16 13:58:31,587 - article_processor - INFO - Processing feed: https://politepol.com/fd/o3jNxZcrpo6w.xml
+2024-12-16 13:58:31,860 - article_processor - INFO - Processing feed: https://politepol.com/fd/3F3XvYFg1X1A.xml
+2024-12-16 13:58:32,140 - article_processor - INFO - Processing feed: https://politepol.com/fd/TWSNDgA2UrNC.xml
+2024-12-16 13:58:32,408 - article_processor - INFO - Processing feed: https://politepol.com/fd/vyPArJmbermO.xml
+2024-12-16 13:58:32,691 - article_processor - INFO - Processing feed: https://politepol.com/fd/M0YpTDNrnk8x.xml
+2024-12-16 13:58:32,945 - article_processor - INFO - Processing feed: https://politepol.com/fd/2oeBhN2Jpeze.xml
+2024-12-16 13:58:33,215 - article_processor - INFO - Processing feed: https://politepol.com/fd/Fltoq0tmu5kT.xml
+2024-12-16 13:58:33,442 - article_processor - INFO - Processing feed: https://cyberdefence24.pl/_rss
+2024-12-16 13:58:33,687 - article_processor - INFO - Processing feed: https://defence24.pl/_RSS
+2024-12-16 13:58:38,584 - article_processor - INFO - Successfully processed and saved article: https://defence24.pl/wojna-na-ukrainie-raport-specjalny-defence24/kolejny-prezent-od-kima-wyrzutnie-rakiet-dla-putina
+2024-12-16 13:58:39,859 - article_processor - INFO - Processing feed: https://defence24.com/_rss
+2024-12-16 13:58:40,105 - article_processor - INFO - Processing feed: https://infosecurity24.pl/_rss
+2024-12-16 13:58:44,035 - article_processor - INFO - Processing feed: https://politepol.com/fd/yMSQPMdW0A9d.xml
+2024-12-16 13:58:50,369 - article_processor - INFO - Processing feed: https://politepol.com/fd/lcvYRMYRE3w6.xml
+2024-12-16 13:58:59,588 - article_processor - INFO - Processing feed: https://politepol.com/fd/AaRUDelNy6uI
+2024-12-16 13:59:00,026 - article_processor - INFO - Processing feed: https://politepol.com/fd/RlZWWeOugzID
+2024-12-16 13:59:00,786 - article_processor - INFO - Processing feed: https://politepol.com/fd/QQ8y0MnyJ0Ps
+2024-12-16 13:59:07,165 - article_processor - INFO - Processing feed: https://politepol.com/fd/iYfzPnaF5k65
+2024-12-16 13:59:07,446 - article_processor - INFO - Processing feed: https://en.bbn.gov.pl/dokumenty/rss/3-rss-1.rss
+2024-12-16 13:59:08,455 - article_processor - INFO - Processing feed: https://politepol.com/fd/iv5sCQcuO3FS.xml
+2024-12-16 13:59:08,929 - article_processor - INFO - Processing feed: https://politepol.com/fd/MwtfzNppMdxB.xml
+2024-12-16 13:59:09,444 - article_processor - INFO - Processing feed: https://politepol.com/fd/CXRVrjJo0Hke.xml
+2024-12-16 13:59:14,076 - article_processor - INFO - Processing feed: https://politepol.com/fd/KLAJSBnC3xN9
+2024-12-16 13:59:15,175 - article_processor - INFO - Processing feed: https://politepol.com/fd/hNhzL30PEO6F
+2024-12-16 13:59:22,653 - article_processor - INFO - Processing feed: https://politepol.com/fd/TrPmJjWZRYMt
+2024-12-16 13:59:35,146 - article_processor - INFO - Processing feed: https://politepol.com/fd/IsSOz2U7LAph.xml
+2024-12-16 13:59:35,950 - article_processor - INFO - Processing feed: https://politepol.com/fd/9thDHqAHZGjx.xml
+2024-12-16 13:59:53,041 - article_processor - INFO - Processing feed: https://politepol.com/fd/ZCxuP2YN7S3A.xml
+2024-12-16 13:59:53,627 - article_processor - INFO - Processing feed: https://politepol.com/fd/vz8QmzNtATRF
+2024-12-16 13:59:53,860 - article_processor - INFO - Processing feed: https://www.wnp.pl/rss/serwis_rss_13.xml
+2024-12-16 13:59:55,558 - article_processor - INFO - Processing feed: https://dziennikzbrojny.pl/rss
+2024-12-16 13:59:56,426 - article_processor - INFO - Processing feed: https://politepol.com/fd/W3LsgnhkgSuX.xml
+2024-12-16 13:59:56,710 - article_processor - INFO - Processing feed: https://www.bbn.gov.pl/dokumenty/rss/1-rss-o-2.rss
+2024-12-16 13:59:57,380 - article_processor - INFO - Processing feed: https://www.hsw.pl/feed/
+2024-12-16 14:00:23,374 - main - INFO - Starting article processing...
+2024-12-16 14:00:23,864 - article_processor - INFO - Starting to process feeds from url.md
+2024-12-16 14:00:24,162 - article_processor - INFO - Processing feed: https://notesfrompoland.com/feed/
+2024-12-16 14:00:24,431 - article_processor - INFO - Processing feed: https://politepol.com/fd/b8Ymwy4PRsNS.xml
+2024-12-16 14:00:24,760 - article_processor - INFO - Processing feed: https://politepol.com/fd/aN6R8Je2fUr5.xml
+2024-12-16 14:00:25,056 - article_processor - INFO - Processing feed: https://politepol.com/fd/1jNMAkmHDN1t.xml
+2024-12-16 14:00:25,334 - article_processor - INFO - Processing feed: https://politepol.com/fd/21fLEtcxQnMj.xml
+2024-12-16 14:00:25,618 - article_processor - INFO - Processing feed: https://politepol.com/fd/eQQIMEUlFKuU.xml
+2024-12-16 14:00:33,959 - article_processor - INFO - Processing feed: https://politepol.com/fd/o3jNxZcrpo6w.xml
+2024-12-16 14:00:41,826 - article_processor - INFO - Successfully processed and saved article: https://www.pap.pl/aktualnosci/ile-liczy-polskie-wojsko-wicepremier-o-stanie-armii-i-wydatkach-na-obronnosc
+2024-12-16 14:00:45,189 - article_processor - INFO - Processing feed: https://politepol.com/fd/3F3XvYFg1X1A.xml
+2024-12-16 14:00:47,216 - article_processor - INFO - Processing feed: https://politepol.com/fd/TWSNDgA2UrNC.xml
+2024-12-16 14:00:51,759 - article_processor - INFO - Successfully processed and saved article: https://www.polskieradio.pl/399/7977/Artykul/3459726,laczenie-na-linii-warszawakosmos-polscy-licealisci-przeprowadzili-niecodzienny-wywiad
+2024-12-16 14:00:53,896 - article_processor - INFO - Processing feed: https://politepol.com/fd/vyPArJmbermO.xml
+2024-12-16 14:01:05,038 - article_processor - INFO - Processing feed: https://politepol.com/fd/M0YpTDNrnk8x.xml
+2024-12-16 14:01:10,570 - article_processor - INFO - Processing feed: https://politepol.com/fd/2oeBhN2Jpeze.xml
+2024-12-16 14:01:16,289 - article_processor - INFO - Processing feed: https://politepol.com/fd/Fltoq0tmu5kT.xml
+2024-12-16 14:01:16,482 - article_processor - INFO - Processing feed: https://cyberdefence24.pl/_rss
+2024-12-16 14:01:16,690 - article_processor - INFO - Processing feed: https://defence24.pl/_RSS
+2024-12-16 14:01:16,893 - article_processor - INFO - Processing feed: https://defence24.com/_rss
+2024-12-16 14:01:17,083 - article_processor - INFO - Processing feed: https://infosecurity24.pl/_rss
+2024-12-16 14:01:17,382 - article_processor - INFO - Processing feed: https://politepol.com/fd/yMSQPMdW0A9d.xml
+2024-12-16 14:01:17,676 - article_processor - INFO - Processing feed: https://politepol.com/fd/lcvYRMYRE3w6.xml
+2024-12-16 14:01:17,984 - article_processor - INFO - Processing feed: https://politepol.com/fd/AaRUDelNy6uI
+2024-12-16 14:01:18,295 - article_processor - INFO - Processing feed: https://politepol.com/fd/RlZWWeOugzID
+2024-12-16 14:01:18,626 - article_processor - INFO - Processing feed: https://politepol.com/fd/QQ8y0MnyJ0Ps
+2024-12-16 14:01:18,932 - article_processor - INFO - Processing feed: https://politepol.com/fd/iYfzPnaF5k65
+2024-12-16 14:01:19,218 - article_processor - INFO - Processing feed: https://en.bbn.gov.pl/dokumenty/rss/3-rss-1.rss
+2024-12-16 14:01:19,526 - article_processor - INFO - Processing feed: https://politepol.com/fd/iv5sCQcuO3FS.xml
+2024-12-16 14:01:19,890 - article_processor - INFO - Processing feed: https://politepol.com/fd/MwtfzNppMdxB.xml
+2024-12-16 14:01:20,236 - article_processor - INFO - Processing feed: https://politepol.com/fd/CXRVrjJo0Hke.xml
+2024-12-16 14:01:20,604 - article_processor - INFO - Processing feed: https://politepol.com/fd/KLAJSBnC3xN9
+2024-12-16 14:01:21,008 - article_processor - INFO - Processing feed: https://politepol.com/fd/hNhzL30PEO6F
+2024-12-16 14:01:21,589 - article_processor - INFO - Processing feed: https://politepol.com/fd/TrPmJjWZRYMt
+2024-12-16 14:01:21,899 - article_processor - INFO - Processing feed: https://politepol.com/fd/IsSOz2U7LAph.xml
+2024-12-16 14:01:22,398 - article_processor - INFO - Processing feed: https://politepol.com/fd/9thDHqAHZGjx.xml
+2024-12-16 14:01:22,760 - article_processor - INFO - Processing feed: https://politepol.com/fd/ZCxuP2YN7S3A.xml
+2024-12-16 14:01:23,048 - article_processor - INFO - Processing feed: https://politepol.com/fd/vz8QmzNtATRF
+2024-12-16 14:01:23,284 - article_processor - INFO - Processing feed: https://www.wnp.pl/rss/serwis_rss_13.xml
+2024-12-16 14:01:24,128 - article_processor - INFO - Processing feed: https://dziennikzbrojny.pl/rss
+2024-12-16 14:01:24,512 - article_processor - INFO - Processing feed: https://politepol.com/fd/W3LsgnhkgSuX.xml
+2024-12-16 14:01:24,788 - article_processor - INFO - Processing feed: https://www.bbn.gov.pl/dokumenty/rss/1-rss-o-2.rss
+2024-12-16 14:01:25,455 - article_processor - INFO - Processing feed: https://www.hsw.pl/feed/
+2024-12-16 14:01:25,785 - article_processor - INFO - Processing feed: https://politepol.com/fd/CGvZ0xwzWc9F.xml
+2024-12-16 14:01:28,461 - article_processor - INFO - Successfully processed and saved article: https://www.pap.pl/aktualnosci/ile-liczy-polskie-wojsko-wicepremier-o-stanie-armii-i-wydatkach-na-obronnosc
+2024-12-16 14:01:29,689 - article_processor - INFO - Processing feed: https://www.bankier.pl/rss/wiadomosci.xml
+2024-12-16 14:01:33,996 - article_processor - INFO - Successfully processed and saved article: https://www.bankier.pl/wiadomosc/Analitycy-Banki-centralne-w-cyklu-obnizek-stop-RPP-moze-ciac-ale-nie-chce-8862044.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci
+2024-12-16 14:01:35,646 - article_processor - INFO - Processing feed: http://rss.dziennik.pl/Dziennik-PL/
+2024-12-16 14:01:35,903 - article_processor - INFO - Processing feed: https://forsal.pl/.feed
+2024-12-16 14:01:40,741 - article_processor - INFO - Successfully processed and saved article: https://forsal.pl/swiat/bezpieczenstwo/aktualnosci/9691147,putin-zdradza-plany-rosyjskiej-armii-ministerstwo-obrony-rosji-podsum.html
+2024-12-16 14:01:48,231 - article_processor - INFO - Successfully processed and saved article: https://forsal.pl/transport/artykuly/9691168,w-przyszlym-roku-trojmiasto-odetchnie-jeden-z-odcinkow-obwodnicy-metr.html
+2024-12-16 14:01:49,706 - article_processor - INFO - Processing feed: http://rss.gazetaprawna.pl/GazetaPrawna
+2024-12-16 14:01:50,097 - article_processor - INFO - Processing feed: https://www.rp.pl/rss/1019
+2024-12-16 14:01:55,190 - article_processor - INFO - Successfully processed and saved article: https://www.rp.pl/transport/art41586421-ciasno-na-lotnisku-chopina-wizz-air-w-2025-r-doda-milion-miejsc-w-samolotach
+2024-12-16 14:02:03,258 - article_processor - INFO - Successfully processed and saved article: https://www.rp.pl/dobra-osobiste/art41586641-ojciec-tadeusz-rydzyk-wytoczyl-proces-tvn-za-reportaz-na-jego-temat
+2024-12-16 14:02:09,416 - article_processor - INFO - Successfully processed and saved article: https://www.rp.pl/prawo-w-polsce/art41586681-dotacja-dla-pis-nadal-pod-znakiem-zapytania-pkw-odracza-obrady

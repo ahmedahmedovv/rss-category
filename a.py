@@ -63,33 +63,51 @@ def save_article(article: Dict[str, Any]):
         print(f"Error saving article: {str(e)}")
         return None
 
-async def get_ai_analysis(content):
-    """Get AI-generated title, summary, and category"""
+async def get_ai_analysis(content, max_retries=3):
+    """Get AI-generated title, summary, and category with retry logic"""
     client = Mistral(api_key=CONFIG['mistral_api_key'])
-
-    prompt = CONFIG['mistral']['prompt_template'].format(content=content)
-
-    chat_response = await client.chat.complete_async(
-        model=CONFIG['mistral']['model'],
-        messages=[UserMessage(content=prompt)],
-    )
     
-    response_text = chat_response.choices[0].message.content
-    
-    # Parse the response
-    title = ""
-    summary = ""
-    category = ""
-    
-    for line in response_text.split('\n'):
-        if line.startswith('TITLE:'):
-            title = line.replace('TITLE:', '').strip()
-        elif line.startswith('SUMMARY:'):
-            summary = line.replace('SUMMARY:', '').strip()
-        elif line.startswith('CATEGORY:'):
-            category = line.replace('CATEGORY:', '').strip()
-    
-    return title, summary, category
+    for attempt in range(max_retries):
+        try:
+            prompt = CONFIG['mistral']['prompt_template'].format(content=content)
+            
+            chat_response = await client.chat.complete_async(
+                model=CONFIG['mistral']['model'],
+                messages=[UserMessage(content=prompt)],
+            )
+            
+            response_text = chat_response.choices[0].message.content
+            
+            # Parse the response
+            title = ""
+            summary = ""
+            category = ""
+            
+            for line in response_text.split('\n'):
+                if line.startswith('TITLE:'):
+                    title = line.replace('TITLE:', '').strip()
+                elif line.startswith('SUMMARY:'):
+                    summary = line.replace('SUMMARY:', '').strip()
+                elif line.startswith('CATEGORY:'):
+                    category = line.replace('CATEGORY:', '').strip()
+            
+            # Validate that we have all required fields
+            if not all([title, summary, category]):
+                if attempt < max_retries - 1:
+                    logger.warning(f"Incomplete AI analysis, retrying... (attempt {attempt + 1})")
+                    continue
+                else:
+                    logger.error("Failed to get complete AI analysis after all retries")
+                    # Provide default summary if still empty
+                    if not summary:
+                        summary = "Summary not available"
+            
+            return title, summary, category
+            
+        except Exception as e:
+            logger.error(f"Error in AI analysis (attempt {attempt + 1}): {str(e)}")
+            if attempt == max_retries - 1:
+                raise
 
 async def fetch_and_translate_feeds(url_file):
     """Fetch articles from RSS feeds and translate them"""

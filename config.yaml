@@ -8,7 +8,7 @@ supabase:
 
 # Feed settings
 feed:
-  entries_to_fetch: 4
+  entries_to_fetch: 5
 
 # File paths
 data_folder: "data"
