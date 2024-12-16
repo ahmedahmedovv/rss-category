@@ -1,6 +1,4 @@
 import feedparser
-import json
-import os
 from deep_translator import GoogleTranslator
 from datetime import datetime
 import time
@@ -10,6 +8,9 @@ from mistralai.models import UserMessage
 import asyncio
 from dotenv import load_dotenv
 import yaml
+import os
+from supabase import create_client, Client
+from typing import List, Dict, Any
 
 # Load environment variables
 load_dotenv()
@@ -24,10 +25,11 @@ def load_config():
 
 CONFIG = load_config()
 
-def create_data_folder():
-    """Create a data folder if it doesn't exist"""
-    if not os.path.exists(CONFIG['data_folder']):
-        os.makedirs(CONFIG['data_folder'])
+# Initialize Supabase client with direct credentials
+supabase: Client = create_client(
+    'https://vyfeecfsnvjanhzaojvq.supabase.co',
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ5ZmVlY2ZzbnZqYW5oemFvanZxIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTczNDM0MDExNywiZXhwIjoyMDQ5OTE2MTE3fQ.cBjja9V92dT0-QYmNfIXEgCU00vE91ZXEetTyc-dmBM'
+)
 
 def clean_html(html_text):
     """Remove HTML tags and clean the text"""
@@ -36,22 +38,26 @@ def clean_html(html_text):
         return soup.get_text(separator=' ', strip=True)
     return ''
 
-def load_existing_articles(filename):
-    """Load existing articles and return their URLs"""
-    existing_urls = set()
-    if os.path.exists(filename):
-        try:
-            with open(filename, 'r', encoding='utf-8') as f:
-                articles = json.load(f)
-                existing_urls = {article['link'] for article in articles}
-        except json.JSONDecodeError:
-            pass
-    return existing_urls
+def load_existing_articles() -> set:
+    """Load existing article URLs from Supabase"""
+    try:
+        response = supabase.table('articles').select('link').execute()
+        return {article['link'] for article in response.data}
+    except Exception as e:
+        print(f"Error loading existing articles: {str(e)}")
+        return set()
 
-def save_articles(articles, filename):
-    """Save articles to JSON file"""
-    with open(filename, 'w', encoding='utf-8') as f:
-        json.dump(articles, f, ensure_ascii=False, indent=2)
+def save_article(article: Dict[str, Any]):
+    """Save article to Supabase"""
+    try:
+        # Add created_at timestamp
+        article['created_at'] = datetime.now().isoformat()
+        
+        response = supabase.table('articles').insert(article).execute()
+        return response
+    except Exception as e:
+        print(f"Error saving article: {str(e)}")
+        return None
 
 async def get_ai_analysis(content):
     """Get AI-generated title, summary, and category"""
@@ -83,17 +89,7 @@ async def get_ai_analysis(content):
 
 async def fetch_and_translate_feeds(url_file):
     """Fetch articles from RSS feeds and translate them"""
-    filename = os.path.join(CONFIG['data_folder'], CONFIG['articles_file'])
-    
-    existing_urls = load_existing_articles(filename)
-    articles = []
-    
-    if os.path.exists(filename):
-        try:
-            with open(filename, 'r', encoding='utf-8') as f:
-                articles = json.load(f)
-        except json.JSONDecodeError:
-            articles = []
+    existing_urls = load_existing_articles()
     
     with open(url_file, 'r') as file:
         urls = [line.strip() for line in file if line.strip()]
@@ -140,24 +136,21 @@ async def fetch_and_translate_feeds(url_file):
                     'ai_summary': ai_summary,
                     'ai_category': ai_category,
                     'link': article_url,
-                    'published': latest_entry.get('published', '')
+                    'published': latest_entry.get('published', ''),
+                    'source_url': url
                 }
                 
-                articles.append(article)
-                save_articles(articles, filename)
-                
+                # Save to Supabase
+                save_article(article)
                 print(f"Processed and saved: {url}")
                 time.sleep(CONFIG['translator']['delay'])
             
         except Exception as e:
             print(f"Error processing {url}: {str(e)}")
-    
-    return filename
 
 async def main():
-    create_data_folder()
-    filename = await fetch_and_translate_feeds(CONFIG['url_file'])
-    print(f"Articles saved to {filename}")
+    await fetch_and_translate_feeds(CONFIG['url_file'])
+    print("Article processing completed!")
 
 if __name__ == "__main__":
     asyncio.run(main())
