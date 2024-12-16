@@ -7,6 +7,12 @@ import aiohttp
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
 from bs4 import BeautifulSoup
+from mistralai import Mistral
+from mistralai.models import UserMessage
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 def read_urls(file_path):
     """Read URLs from the markdown file."""
@@ -39,7 +45,52 @@ def clean_html(html_content):
     text = ' '.join(soup.get_text().split())
     return text
 
-async def fetch_rss_feed(session, url, existing_link=None):
+async def get_ai_enhancements(client, title, description):
+    """Get AI-enhanced title, summary, and category."""
+    prompt = f"""
+    Based on this article:
+    Title: {title}
+    Content: {description}
+
+    Please provide:
+    1. A more engaging title (max 100 characters)
+    2. A concise summary (max 200 characters)
+    3. A single category that best describes this article (e.g., Politics, Economy, Technology, Society, etc.)
+
+    Format your response exactly like this:
+    Title: [your title]
+    Summary: [your summary]
+    Category: [your category]
+    """
+
+    try:
+        response = await client.chat.complete_async(
+            model="mistral-tiny",
+            messages=[UserMessage(content=prompt)],
+        )
+        
+        result = response.choices[0].message.content
+        
+        # Parse the response
+        lines = result.split('\n')
+        ai_title = lines[0].replace('Title: ', '').strip()
+        ai_summary = lines[1].replace('Summary: ', '').strip()
+        ai_category = lines[2].replace('Category: ', '').strip()
+        
+        return {
+            'ai_title': ai_title,
+            'ai_summary': ai_summary,
+            'ai_category': ai_category
+        }
+    except Exception as e:
+        print(f"Error getting AI enhancements: {str(e)}")
+        return {
+            'ai_title': title,
+            'ai_summary': description[:200],
+            'ai_category': 'Unknown'
+        }
+
+async def fetch_rss_feed(session, url, existing_link=None, mistral_client=None):
     """Fetch RSS feed from a given URL using aiohttp."""
     try:
         async with session.get(url, timeout=10) as response:
@@ -49,14 +100,12 @@ async def fetch_rss_feed(session, url, existing_link=None):
             except UnicodeDecodeError:
                 content = await response.text(encoding='iso-8859-1')
             except:
-                # If both attempts fail, try to read raw bytes and decode manually
                 raw_content = await response.read()
                 try:
                     content = raw_content.decode('utf-8', errors='ignore')
                 except:
                     content = raw_content.decode('iso-8859-1', errors='ignore')
             
-        # Use ThreadPoolExecutor for feedparser since it's not async
         with ThreadPoolExecutor() as executor:
             feed = await asyncio.get_event_loop().run_in_executor(
                 executor, feedparser.parse, content
@@ -69,16 +118,32 @@ async def fetch_rss_feed(session, url, existing_link=None):
             if existing_link and latest_link == existing_link:
                 print(f"Skip fetching {url}: already have latest article")
                 return None
+            
+            title = clean_html(latest_entry.get('title', ''))
+            description = clean_html(latest_entry.get('description', ''))
+            
+            # Get AI enhancements
+            if mistral_client:
+                ai_content = await get_ai_enhancements(mistral_client, title, description)
+            else:
+                ai_content = {
+                    'ai_title': title,
+                    'ai_summary': description[:200],
+                    'ai_category': 'Unknown'
+                }
                 
             return {
                 'title': feed.feed.get('title', 'No Title'),
                 'link': url,
                 'latest_article': {
-                    'title': clean_html(latest_entry.get('title', '')),
+                    'title': title,
                     'link': latest_link,
                     'published': latest_entry.get('published', ''),
                     'summary': clean_html(latest_entry.get('summary', '')),
-                    'description': clean_html(latest_entry.get('description', ''))
+                    'description': description,
+                    'ai_title': ai_content['ai_title'],
+                    'ai_summary': ai_content['ai_summary'],
+                    'ai_category': ai_content['ai_category']
                 }
             }
         return None
@@ -89,23 +154,26 @@ async def fetch_rss_feed(session, url, existing_link=None):
 async def process_feeds(urls, existing_feeds, output_file):
     """Process all feeds concurrently."""
     feeds = existing_feeds.copy()
-    connector = aiohttp.TCPConnector(limit=10)  # Limit concurrent connections
+    connector = aiohttp.TCPConnector(limit=10)
+    
+    # Initialize Mistral client using API key from .env
+    api_key = os.getenv("MISTRAL_API_KEY")
+    if not api_key:
+        print("Warning: MISTRAL_API_KEY not found in .env file")
+    mistral_client = Mistral(api_key=api_key) if api_key else None
+    
     async with aiohttp.ClientSession(connector=connector) as session:
         tasks = []
         for url in urls:
             existing_link = get_existing_article_link(existing_feeds, url)
-            tasks.append(fetch_rss_feed(session, url, existing_link))
+            tasks.append(fetch_rss_feed(session, url, existing_link, mistral_client))
         
-        # Gather results as they complete
         results = await asyncio.gather(*tasks)
         
         for url, feed_data in zip(urls, results):
             if feed_data:
-                # Remove old entry if it exists
                 feeds = [f for f in feeds if f['link'] != url]
-                # Add new entry
                 feeds.append(feed_data)
-                # Save current progress
                 with open(output_file, 'w', encoding='utf-8') as f:
                     json.dump(feeds, f, ensure_ascii=False, indent=2)
                 print(f"Updated {output_file} with {len(feeds)} feeds")
@@ -113,7 +181,6 @@ async def process_feeds(urls, existing_feeds, output_file):
     return feeds
 
 async def main():
-    # Create data directory if it doesn't exist
     data_dir = Path('data')
     data_dir.mkdir(exist_ok=True)
     
