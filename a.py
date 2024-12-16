@@ -30,10 +30,10 @@ def load_config():
 
 CONFIG = load_config()
 
-# Initialize Supabase client with config values
+# Initialize Supabase client with environment variables
 supabase: Client = create_client(
-    CONFIG['supabase']['url'],
-    CONFIG['supabase']['key']
+    os.getenv('SUPABASE_URL'),
+    os.getenv('SUPABASE_KEY')
 )
 
 def clean_html(html_text):

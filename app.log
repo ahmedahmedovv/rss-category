@@ -324,3 +324,235 @@
 2024-12-16 14:04:50,343 - rss_generator - INFO - Uploading science.xml to Supabase storage
 2024-12-16 14:04:51,095 - rss_generator - INFO - Successfully uploaded science.xml
 2024-12-16 14:04:51,097 - main - INFO - All operations completed successfully!
+2024-12-16 17:51:48,041 - main - INFO - Starting article processing...
+2024-12-16 17:51:48,593 - article_processor - INFO - Starting to process feeds from url.md
+2024-12-16 17:51:48,841 - article_processor - INFO - Processing feed: https://notesfrompoland.com/feed/
+2024-12-16 17:51:49,605 - article_processor - INFO - Processing feed: https://politepol.com/fd/b8Ymwy4PRsNS.xml
+2024-12-16 17:51:50,424 - article_processor - INFO - Processing feed: https://politepol.com/fd/aN6R8Je2fUr5.xml
+2024-12-16 17:51:51,346 - article_processor - INFO - Processing feed: https://politepol.com/fd/1jNMAkmHDN1t.xml
+2024-12-16 17:51:51,963 - article_processor - ERROR - Error in AI analysis (attempt 1): API error occurred: Status 401
+{
+  "message":"No API key found in request",
+  "request_id":"22dff13c5e5a5e333412e464f536a13b"
+}
+2024-12-16 17:51:52,031 - article_processor - ERROR - Error in AI analysis (attempt 2): API error occurred: Status 401
+{
+  "message":"No API key found in request",
+  "request_id":"b7942f519b8f4a7c3b08d46d0ac1854a"
+}
+2024-12-16 17:51:52,103 - article_processor - ERROR - Error in AI analysis (attempt 3): API error occurred: Status 401
+{
+  "message":"No API key found in request",
+  "request_id":"39f5c76adc6387766968361c5bd4b927"
+}
+2024-12-16 17:51:52,890 - article_processor - INFO - Processing feed: https://politepol.com/fd/21fLEtcxQnMj.xml
+2024-12-16 17:51:53,590 - article_processor - ERROR - Error in AI analysis (attempt 1): API error occurred: Status 401
+{
+  "message":"No API key found in request",
+  "request_id":"10f75555c582197c02ed552b91323269"
+}
+2024-12-16 17:51:53,714 - article_processor - ERROR - Error in AI analysis (attempt 2): API error occurred: Status 401
+{
+  "message":"No API key found in request",
+  "request_id":"7ad4787a0f7920425ca70b28c5774e08"
+}
+2024-12-16 17:51:53,854 - article_processor - ERROR - Error in AI analysis (attempt 3): API error occurred: Status 401
+{
+  "message":"No API key found in request",
+  "request_id":"2512636699012338262515664b60915c"
+}
+2024-12-16 17:51:54,520 - article_processor - INFO - Processing feed: https://politepol.com/fd/eQQIMEUlFKuU.xml
+2024-12-16 17:51:54,673 - article_processor - INFO - Processing feed: https://politepol.com/fd/o3jNxZcrpo6w.xml
+2024-12-16 17:52:30,658 - main - INFO - Starting article processing...
+2024-12-16 17:52:30,894 - article_processor - INFO - Starting to process feeds from url.md
+2024-12-16 17:52:31,085 - article_processor - INFO - Processing feed: https://notesfrompoland.com/feed/
+2024-12-16 17:52:31,239 - article_processor - INFO - Processing feed: https://politepol.com/fd/b8Ymwy4PRsNS.xml
+2024-12-16 17:52:31,392 - article_processor - INFO - Processing feed: https://politepol.com/fd/aN6R8Je2fUr5.xml
+2024-12-16 17:52:31,632 - article_processor - INFO - Processing feed: https://politepol.com/fd/1jNMAkmHDN1t.xml
+2024-12-16 17:52:34,181 - article_processor - INFO - Successfully processed and saved article: https://www.polskieradio.pl/395/7785/Artykul/3459886,germanys-bundestag-rejects-confidence-vote-for-chancellor-scholz
+2024-12-16 17:52:35,355 - article_processor - INFO - Processing feed: https://politepol.com/fd/21fLEtcxQnMj.xml
+2024-12-16 17:52:37,766 - article_processor - INFO - Successfully processed and saved article: https://www.polskieradio.pl/395/9766/Artykul/3459898,negotiations-to-end-russian-aggression-must-include-ukraine-says-polish-president
+2024-12-16 17:52:38,952 - article_processor - INFO - Processing feed: https://politepol.com/fd/eQQIMEUlFKuU.xml
+2024-12-16 17:52:39,114 - article_processor - INFO - Processing feed: https://politepol.com/fd/o3jNxZcrpo6w.xml
+2024-12-16 17:52:42,676 - article_processor - INFO - Successfully processed and saved article: https://www.pap.pl/aktualnosci/sprawa-sprawozdania-finansowego-pis-kaczynski-o-decyzji-pkw-przestepstwo
+2024-12-16 17:52:48,354 - article_processor - INFO - Successfully processed and saved article: https://www.pap.pl/aktualnosci/kotula-w-sprawie-zwiazkow-partnerskich-jest-mozliwy-konsensus
+2024-12-16 17:52:52,351 - article_processor - INFO - Successfully processed and saved article: https://www.pap.pl/aktualnosci/byly-posel-sld-nie-zyje
+2024-12-16 17:52:57,668 - article_processor - INFO - Successfully processed and saved article: https://www.pap.pl/aktualnosci/prezydent-duda-negocjacje-dot-konca-rosyjskiej-agresji-musza-toczyc-sie-z-udzialem
+2024-12-16 17:53:01,256 - article_processor - INFO - Successfully processed and saved article: https://www.pap.pl/aktualnosci/hermelinski-o-odroczeniu-obrad-pkw-nie-najgorsze-wyjscie
+2024-12-16 17:53:02,910 - article_processor - INFO - Processing feed: https://politepol.com/fd/3F3XvYFg1X1A.xml
+2024-12-16 17:53:03,773 - article_processor - INFO - Processing feed: https://politepol.com/fd/TWSNDgA2UrNC.xml
+2024-12-16 17:53:04,671 - article_processor - INFO - Processing feed: https://politepol.com/fd/vyPArJmbermO.xml
+2024-12-16 17:53:11,028 - article_processor - INFO - Processing feed: https://politepol.com/fd/M0YpTDNrnk8x.xml
+2024-12-16 17:53:21,467 - article_processor - INFO - Processing feed: https://politepol.com/fd/2oeBhN2Jpeze.xml
+2024-12-16 17:53:34,853 - article_processor - INFO - Processing feed: https://politepol.com/fd/Fltoq0tmu5kT.xml
+2024-12-16 17:53:34,988 - article_processor - INFO - Processing feed: https://cyberdefence24.pl/_rss
+2024-12-16 17:53:35,118 - article_processor - INFO - Processing feed: https://defence24.pl/_RSS
+2024-12-16 17:53:38,537 - article_processor - INFO - Successfully processed and saved article: https://defence24.pl/sily-zbrojne/stepka-pod-czajke-foto
+2024-12-16 17:53:43,366 - article_processor - INFO - Successfully processed and saved article: https://defence24.pl/polityka-obronna/olaf-scholz-bez-wotum-zaufania
+2024-12-16 17:53:47,057 - article_processor - INFO - Successfully processed and saved article: https://defence24.pl/sily-zbrojne/wiecej-rosomakow-z-wieza-zssw-30-jutro-umowa
+2024-12-16 17:53:48,230 - article_processor - INFO - Processing feed: https://defence24.com/_rss
+2024-12-16 17:53:48,369 - article_processor - INFO - Processing feed: https://infosecurity24.pl/_rss
+2024-12-16 17:53:56,073 - article_processor - INFO - Processing feed: https://politepol.com/fd/yMSQPMdW0A9d.xml
+2024-12-16 17:53:59,538 - article_processor - INFO - Successfully processed and saved article: https://www.pap.pl/aktualnosci/pozew-michala-adamczyka-przeciwko-telewizji-polskiej-jest-decyzja-sadu
+2024-12-16 17:54:04,398 - article_processor - INFO - Successfully processed and saved article: https://www.pap.pl/aktualnosci/sprawa-sprawozdania-finansowego-pis-kaczynski-o-decyzji-pkw-przestepstwo
+2024-12-16 17:54:07,373 - article_processor - INFO - Successfully processed and saved article: https://www.pap.pl/aktualnosci/kotula-w-sprawie-zwiazkow-partnerskich-jest-mozliwy-konsensus
+2024-12-16 17:54:10,043 - article_processor - INFO - Successfully processed and saved article: https://www.pap.pl/aktualnosci/byly-posel-sld-nie-zyje
+2024-12-16 17:54:13,247 - article_processor - INFO - Successfully processed and saved article: https://www.pap.pl/aktualnosci/prezydent-duda-negocjacje-dot-konca-rosyjskiej-agresji-musza-toczyc-sie-z-udzialem
+2024-12-16 17:54:16,646 - article_processor - INFO - Successfully processed and saved article: https://www.pap.pl/aktualnosci/hermelinski-o-odroczeniu-obrad-pkw-nie-najgorsze-wyjscie
+2024-12-16 17:54:23,820 - article_processor - INFO - Processing feed: https://politepol.com/fd/lcvYRMYRE3w6.xml
+2024-12-16 17:54:30,374 - article_processor - INFO - Processing feed: https://politepol.com/fd/AaRUDelNy6uI
+2024-12-16 17:54:30,652 - article_processor - INFO - Processing feed: https://politepol.com/fd/RlZWWeOugzID
+2024-12-16 17:54:33,346 - article_processor - INFO - Processing feed: https://politepol.com/fd/QQ8y0MnyJ0Ps
+2024-12-16 17:54:41,947 - article_processor - INFO - Processing feed: https://politepol.com/fd/iYfzPnaF5k65
+2024-12-16 17:54:42,064 - article_processor - INFO - Processing feed: https://en.bbn.gov.pl/dokumenty/rss/3-rss-1.rss
+2024-12-16 17:54:42,609 - article_processor - INFO - Processing feed: https://politepol.com/fd/iv5sCQcuO3FS.xml
+2024-12-16 17:54:43,074 - article_processor - INFO - Processing feed: https://politepol.com/fd/MwtfzNppMdxB.xml
+2024-12-16 17:54:46,122 - article_processor - INFO - Successfully processed and saved article: https://www.gov.pl/web/diplomacy/polands-presidency-of-the-council-of-the-eu-in-2025-ministry-of-foreign-affairs-priorities-and-activities2
+2024-12-16 17:54:47,684 - article_processor - INFO - Processing feed: https://politepol.com/fd/CXRVrjJo0Hke.xml
+2024-12-16 17:54:52,698 - article_processor - INFO - Processing feed: https://politepol.com/fd/KLAJSBnC3xN9
+2024-12-16 17:54:53,216 - article_processor - INFO - Processing feed: https://politepol.com/fd/hNhzL30PEO6F
+2024-12-16 17:54:59,077 - article_processor - INFO - Successfully processed and saved article: https://www.gov.pl/web/obrona-narodowa/pamietamy-o-tych-ktorzy-w-swieta-beda-chronic-granicy-panstwa
+2024-12-16 17:55:21,812 - article_processor - INFO - Processing feed: https://politepol.com/fd/TrPmJjWZRYMt
+2024-12-16 17:55:34,691 - article_processor - INFO - Processing feed: https://politepol.com/fd/IsSOz2U7LAph.xml
+2024-12-16 17:55:35,349 - article_processor - INFO - Processing feed: https://politepol.com/fd/9thDHqAHZGjx.xml
+2024-12-16 17:55:47,965 - article_processor - INFO - Processing feed: https://politepol.com/fd/ZCxuP2YN7S3A.xml
+2024-12-16 17:55:49,128 - article_processor - INFO - Processing feed: https://politepol.com/fd/vz8QmzNtATRF
+2024-12-16 17:55:49,264 - article_processor - INFO - Processing feed: https://www.wnp.pl/rss/serwis_rss_13.xml
+2024-12-16 17:55:49,976 - article_processor - INFO - Processing feed: https://dziennikzbrojny.pl/rss
+2024-12-16 17:55:50,660 - article_processor - INFO - Processing feed: https://politepol.com/fd/W3LsgnhkgSuX.xml
+2024-12-16 17:55:50,753 - article_processor - INFO - Processing feed: https://www.bbn.gov.pl/dokumenty/rss/1-rss-o-2.rss
+2024-12-16 17:55:51,458 - article_processor - INFO - Processing feed: https://www.hsw.pl/feed/
+2024-12-16 17:55:58,032 - article_processor - INFO - Processing feed: https://politepol.com/fd/CGvZ0xwzWc9F.xml
+2024-12-16 17:56:01,984 - article_processor - INFO - Successfully processed and saved article: https://www.pap.pl/aktualnosci/pozew-michala-adamczyka-przeciwko-telewizji-polskiej-jest-decyzja-sadu
+2024-12-16 17:56:05,126 - article_processor - INFO - Successfully processed and saved article: https://www.pap.pl/aktualnosci/sprawa-sprawozdania-finansowego-pis-kaczynski-o-decyzji-pkw-przestepstwo
+2024-12-16 17:56:07,969 - article_processor - INFO - Successfully processed and saved article: https://www.pap.pl/aktualnosci/kotula-w-sprawie-zwiazkow-partnerskich-jest-mozliwy-konsensus
+2024-12-16 17:56:11,986 - article_processor - INFO - Successfully processed and saved article: https://www.pap.pl/aktualnosci/byly-posel-sld-nie-zyje
+2024-12-16 17:56:15,520 - article_processor - INFO - Successfully processed and saved article: https://www.pap.pl/aktualnosci/prezydent-duda-negocjacje-dot-konca-rosyjskiej-agresji-musza-toczyc-sie-z-udzialem
+2024-12-16 17:56:31,052 - article_processor - INFO - Successfully processed and saved article: https://www.pap.pl/aktualnosci/hermelinski-o-odroczeniu-obrad-pkw-nie-najgorsze-wyjscie
+2024-12-16 17:56:32,201 - article_processor - INFO - Processing feed: https://www.bankier.pl/rss/wiadomosci.xml
+2024-12-16 17:56:36,225 - article_processor - WARNING - Incomplete AI analysis, retrying... (attempt 1)
+2024-12-16 17:56:38,916 - article_processor - INFO - Successfully processed and saved article: https://www.bankier.pl/wiadomosc/Energetyczny-poczatek-tygodnia-na-GPW-Wezwanie-na-Grenevie-z-mWIG40-rozpalilo-emocje-8862230.html?utm_source=RSS&utm_medium=RSS&utm_campaign=Wiadomosci
+2024-12-16 17:56:40,489 - article_processor - INFO - Processing feed: http://rss.dziennik.pl/Dziennik-PL/
+2024-12-16 17:56:43,706 - article_processor - INFO - Successfully processed and saved article: https://www.dziennik.pl/quizy/quizy/9689506,prosty-quiz-z-wiedzy-ogolnej-wynik-810-murowany.html
+2024-12-16 17:56:49,265 - article_processor - INFO - Successfully processed and saved article: https://zdrowie.dziennik.pl/porady/artykuly/9691638,najgorsza-pozycja-do-spania-powoduje-niewyspanie-bol-plecow-i-glowy.html
+2024-12-16 17:56:54,849 - article_processor - INFO - Successfully processed and saved article: https://sport.dziennik.pl/pilka-nozna/ligi-zagraniczne/artykuly/9691701,robert-lewandowski-pod-tym-wzgledem-nie-ma-sobie-rownych.html
+2024-12-16 17:57:16,059 - article_processor - INFO - Successfully processed and saved article: https://wiadomosci.dziennik.pl/wydarzenia/artykuly/9691623,smierc-27-latka-w-inowroclawiu-policjanci-zwolnieni-prokuratura-prow.html
+2024-12-16 17:57:20,080 - article_processor - INFO - Successfully processed and saved article: https://wiadomosci.dziennik.pl/swiat/artykuly/9691622,upadek-rzadu-olafa-scholza-bundestag-zdecydowal.html
+2024-12-16 17:57:25,099 - article_processor - INFO - Successfully processed and saved article: https://wiadomosci.dziennik.pl/polityka/artykuly/9691526,skarbik-pis-oburzony-mowi-o-jawnym-lamaniu-prawa.html
+2024-12-16 17:57:26,310 - article_processor - INFO - Processing feed: https://forsal.pl/.feed
+2024-12-16 17:57:30,651 - article_processor - INFO - Successfully processed and saved article: https://forsal.pl/biznes/energetyka/artykuly/9691807,energetyczny-rollercoaster-kaprysna-pogoda-miesza-na-rynku-energii.html
+2024-12-16 17:57:32,150 - article_processor - INFO - Processing feed: http://rss.gazetaprawna.pl/GazetaPrawna
+2024-12-16 17:57:32,357 - article_processor - INFO - Processing feed: https://www.rp.pl/rss/1019
+2024-12-16 17:57:35,705 - article_processor - INFO - Successfully processed and saved article: https://www.rp.pl/gielda/art41588311-gielda-w-warszawie-bez-mocy
+2024-12-16 17:57:41,366 - article_processor - INFO - Successfully processed and saved article: https://kobieta.rp.pl/uroda/art41536941-nie-kazdy-makijaz-nadaje-sie-do-pracy-ekspertka-radzi-co-lepiej-zostawic-na-prywatne-okazje
+2024-12-16 17:57:48,460 - article_processor - INFO - Successfully processed and saved article: https://www.rp.pl/polityka/art41587181-szuldrzynski-trzaskowski-dominuje-holownia-traci-wyborcow-trzeciej-drogi-nawrocki-na-kroplowce-pis
+2024-12-16 17:57:54,283 - article_processor - INFO - Successfully processed and saved article: https://pro.rp.pl/podatki/art41586901-zmiany-przepisow-o-kasynach-jedno-wadliwe-rozwiazanie-zastepuje-sie-innym-nieprawidlowym
+2024-12-16 17:58:00,597 - article_processor - INFO - Successfully processed and saved article: https://www.rp.pl/biznes/art41587851-kto-na-czarnej-liscie-unii-nazwiska-i-firmy-z-15-pakietu
+2024-12-16 17:58:07,987 - article_processor - INFO - Successfully processed and saved article: https://www.rp.pl/konflikty-zbrojne/art41587541-syria-rosyjskie-bazy-osaczone-rosja-nie-chce-sie-wycofac
+2024-12-16 17:58:09,204 - article_processor - INFO - Processing feed: https://www.rp.pl/rss/11-kraj
+2024-12-16 17:58:13,315 - article_processor - INFO - Successfully processed and saved article: https://www.rp.pl/polityka/art41587181-szuldrzynski-trzaskowski-dominuje-holownia-traci-wyborcow-trzeciej-drogi-nawrocki-na-kroplowce-pis
+2024-12-16 17:58:18,966 - article_processor - INFO - Successfully processed and saved article: https://sport.rp.pl/sport/art41587251-wyjasniamy-jak-i-kiedy-andrzej-duda-moze-zostac-czlonkiem-mkol-oraz-ile-zarobi
+2024-12-16 17:58:23,357 - article_processor - INFO - Successfully processed and saved article: https://www.rp.pl/polityka/art41587831-podcast-rzecz-w-tym-andrzej-duda-w-mkol-ambicja-czy-misja
+2024-12-16 17:58:27,944 - article_processor - INFO - Successfully processed and saved article: https://www.rp.pl/polityka/art41587781-jaroslaw-kaczynski-przez-caly-czas-pieniadze-powinny-plynac-do-pis
+2024-12-16 17:58:29,605 - article_processor - INFO - Processing feed: https://feeds.feedburner.com/wPolitycepl
+2024-12-16 17:58:32,863 - article_processor - INFO - Successfully processed and saved article: https://wpolityce.pl/polityka/715998-prezes-pis-decyzja-pkw-jest-calkowicie-bezprawna
+2024-12-16 17:58:37,049 - article_processor - INFO - Successfully processed and saved article: https://wpolityce.pl/polityka/715994-komisja-europejska-znow-uderza-w-polske
+2024-12-16 17:58:41,333 - article_processor - INFO - Successfully processed and saved article: https://wpolityce.pl/gospodarka/715999-gordyjski-wezel-ue-nowy-komisarz-ds-energii-nie-ma-pomyslu
+2024-12-16 17:58:47,245 - article_processor - INFO - Successfully processed and saved article: https://wpolityce.pl/polityka/715989-pogarda-dla-sn-kalisz-pkw-nie-mogla-uznac-dokumentu-7-osob
+2024-12-16 17:58:53,056 - article_processor - INFO - Successfully processed and saved article: https://wpolityce.pl/polityka/715954-zwiazki-partnerskie-kotula-liczy-ze-przekona-psl
+2024-12-16 17:58:56,622 - article_processor - INFO - Successfully processed and saved article: https://wpolityce.pl/kryminal/715996-tragiczne-skutki-policyjnej-interwencji-nie-zyje-27-latek
+2024-12-16 17:58:57,785 - article_processor - INFO - Processing feed: https://tvn24.pl/najnowsze.xml
+2024-12-16 17:59:00,674 - article_processor - INFO - Successfully processed and saved article: https://tvn24.pl/swiat/usa-samochod-przebil-sciane-klubu-fitness-i-wjechal-do-basenu-nagranie-st8224872?source=rss
+2024-12-16 17:59:04,900 - article_processor - INFO - Successfully processed and saved article: https://tvn24.pl/tvnmeteo/swiat/kataklizm-na-francuskiej-wyspie-jakby-bomba-atomowa-spadla-na-majotte-st8224880?source=rss
+2024-12-16 17:59:10,957 - article_processor - INFO - Successfully processed and saved article: https://tvn24.pl/kultura-i-styl/nagroda-imienia-marcina-pawlowskiego-i-dariusza-kmiecika-za-2024-rok-laureaci-i-wyroznione-materialy-st8224655?source=rss
+2024-12-16 17:59:14,706 - article_processor - WARNING - Incomplete AI analysis, retrying... (attempt 1)
+2024-12-16 17:59:16,321 - article_processor - INFO - Successfully processed and saved article: https://tvn24.pl/kielce/bodzentyn-burmistrz-przelal-pieniadze-szkolom-ale-ostrzegl-przed-wyplacaniem-ich-nauczycielom-st8224885?source=rss
+2024-12-16 17:59:21,942 - article_processor - INFO - Successfully processed and saved article: https://tvn24.pl/tvnmeteo/swiat/burza-lodowa-wywolala-paraliz-komunikacyjny-st8224686?source=rss
+2024-12-16 17:59:25,239 - article_processor - INFO - Successfully processed and saved article: https://tvn24.pl/swiat/indie-najludniejszy-kraj-swiata-chce-zwiekszyc-dzietnosc-poludnie-boi-sie-reformy-w-2026-roku-st8224706?source=rss
+2024-12-16 17:59:26,366 - article_processor - INFO - Processing feed: https://www.newsweek.pl/rss.xml
+2024-12-16 17:59:26,538 - article_processor - INFO - Processing feed: https://www.polsatnews.pl/rss/wszystkie.xml
+2024-12-16 17:59:26,893 - article_processor - INFO - Processing feed: https://www.polsatnews.pl/rss/kraj.xml
+2024-12-16 17:59:27,079 - article_processor - INFO - Processing feed: https://www.rmf24.pl/feed
+2024-12-16 17:59:31,117 - article_processor - INFO - Successfully processed and saved article: https://www.rmf24.pl/tylko-w-rmf24/popoludniowa-rozmowa/news-katarzyna-pelczynska-nalecz-gosciem-popoludniowej-rozmowy-w-,nId,7876296
+2024-12-16 17:59:36,264 - article_processor - INFO - Successfully processed and saved article: https://www.rmf24.pl/polityka/news-kaczynski-grzmi-po-decyzji-pkw-to-przestepstwo,nId,7876524
+2024-12-16 17:59:40,677 - article_processor - INFO - Successfully processed and saved article: https://www.rmf24.pl/raporty/raport-lech-kaczynski-nie-zyje-2/fakty/news-tomasz-arabski-uniewinniony-od-zarzutow-ws-organizacji-lotu-,nId,7876508
+2024-12-16 17:59:45,796 - article_processor - INFO - Successfully processed and saved article: https://www.rmf24.pl/regiony/wroclaw/news-troche-paryza-we-wroclawiu-przed-nami-ostatnie-sceny-chopin-,nId,7876528
+2024-12-16 17:59:47,448 - article_processor - INFO - Processing feed: https://politepol.com/fd/rXWWVpuDzKxX.xml
+2024-12-16 17:59:49,058 - article_processor - INFO - Processing feed: https://politepol.com/fd/1HxW1FCnF1sA.xml
+2024-12-16 17:59:52,343 - article_processor - INFO - Successfully processed and saved article: https://www.polskieradio.pl/130/5819/Artykul/3459800,pkw-odracza-obrady-ws-sprawozdania-pis-absolutnie-bezprawna-decyzja
+2024-12-16 17:59:56,498 - article_processor - INFO - Successfully processed and saved article: https://www.polskieradio.pl/5/1222/Artykul/3459871,dobre-wiesci-dla-podroznikow-wizz-air-z-nowymi-trasami
+2024-12-16 18:00:02,372 - main - INFO - Starting article processing...
+2024-12-16 18:00:02,558 - article_processor - INFO - Starting to process feeds from url.md
+2024-12-16 18:00:02,798 - article_processor - INFO - Processing feed: https://notesfrompoland.com/feed/
+2024-12-16 18:00:02,958 - article_processor - INFO - Processing feed: https://politepol.com/fd/b8Ymwy4PRsNS.xml
+2024-12-16 18:00:03,158 - article_processor - INFO - Processing feed: https://politepol.com/fd/aN6R8Je2fUr5.xml
+2024-12-16 18:00:03,499 - article_processor - INFO - Processing feed: https://politepol.com/fd/1jNMAkmHDN1t.xml
+2024-12-16 18:00:03,657 - article_processor - INFO - Processing feed: https://politepol.com/fd/21fLEtcxQnMj.xml
+2024-12-16 18:00:03,809 - article_processor - INFO - Processing feed: https://politepol.com/fd/eQQIMEUlFKuU.xml
+2024-12-16 18:00:04,113 - article_processor - INFO - Processing feed: https://politepol.com/fd/o3jNxZcrpo6w.xml
+2024-12-16 18:00:04,521 - article_processor - INFO - Processing feed: https://politepol.com/fd/3F3XvYFg1X1A.xml
+2024-12-16 18:00:04,681 - article_processor - INFO - Processing feed: https://politepol.com/fd/TWSNDgA2UrNC.xml
+2024-12-16 18:00:04,841 - article_processor - INFO - Processing feed: https://politepol.com/fd/vyPArJmbermO.xml
+2024-12-16 18:00:05,030 - article_processor - INFO - Processing feed: https://politepol.com/fd/M0YpTDNrnk8x.xml
+2024-12-16 18:00:05,210 - article_processor - INFO - Processing feed: https://politepol.com/fd/2oeBhN2Jpeze.xml
+2024-12-16 18:00:05,363 - article_processor - INFO - Processing feed: https://politepol.com/fd/Fltoq0tmu5kT.xml
+2024-12-16 18:00:05,563 - article_processor - INFO - Processing feed: https://cyberdefence24.pl/_rss
+2024-12-16 18:00:05,706 - article_processor - INFO - Processing feed: https://defence24.pl/_RSS
+2024-12-16 18:00:05,889 - article_processor - INFO - Processing feed: https://defence24.com/_rss
+2024-12-16 18:00:06,021 - article_processor - INFO - Processing feed: https://infosecurity24.pl/_rss
+2024-12-16 18:00:06,184 - article_processor - INFO - Processing feed: https://politepol.com/fd/yMSQPMdW0A9d.xml
+2024-12-16 18:00:06,463 - article_processor - INFO - Processing feed: https://politepol.com/fd/lcvYRMYRE3w6.xml
+2024-12-16 18:00:06,627 - article_processor - INFO - Processing feed: https://politepol.com/fd/AaRUDelNy6uI
+2024-12-16 18:00:07,080 - article_processor - INFO - Processing feed: https://politepol.com/fd/RlZWWeOugzID
+2024-12-16 18:00:07,241 - article_processor - INFO - Processing feed: https://politepol.com/fd/QQ8y0MnyJ0Ps
+2024-12-16 18:00:07,399 - article_processor - INFO - Processing feed: https://politepol.com/fd/iYfzPnaF5k65
+2024-12-16 18:00:07,479 - article_processor - INFO - Processing feed: https://en.bbn.gov.pl/dokumenty/rss/3-rss-1.rss
+2024-12-16 18:00:07,759 - article_processor - INFO - Processing feed: https://politepol.com/fd/iv5sCQcuO3FS.xml
+2024-12-16 18:00:07,928 - article_processor - INFO - Processing feed: https://politepol.com/fd/MwtfzNppMdxB.xml
+2024-12-16 18:00:08,248 - article_processor - INFO - Processing feed: https://politepol.com/fd/CXRVrjJo0Hke.xml
+2024-12-16 18:00:08,415 - article_processor - INFO - Processing feed: https://politepol.com/fd/KLAJSBnC3xN9
+2024-12-16 18:00:08,625 - article_processor - INFO - Processing feed: https://politepol.com/fd/hNhzL30PEO6F
+2024-12-16 18:00:08,787 - article_processor - INFO - Processing feed: https://politepol.com/fd/TrPmJjWZRYMt
+2024-12-16 18:00:09,099 - article_processor - INFO - Processing feed: https://politepol.com/fd/IsSOz2U7LAph.xml
+2024-12-16 18:00:09,437 - article_processor - INFO - Processing feed: https://politepol.com/fd/9thDHqAHZGjx.xml
+2024-12-16 18:00:09,660 - article_processor - INFO - Processing feed: https://politepol.com/fd/ZCxuP2YN7S3A.xml
+2024-12-16 18:00:09,854 - article_processor - INFO - Processing feed: https://politepol.com/fd/vz8QmzNtATRF
+2024-12-16 18:00:09,974 - article_processor - INFO - Processing feed: https://www.wnp.pl/rss/serwis_rss_13.xml
+2024-12-16 18:00:10,603 - article_processor - INFO - Processing feed: https://dziennikzbrojny.pl/rss
+2024-12-16 18:00:10,761 - article_processor - INFO - Processing feed: https://politepol.com/fd/W3LsgnhkgSuX.xml
+2024-12-16 18:00:10,857 - article_processor - INFO - Processing feed: https://www.bbn.gov.pl/dokumenty/rss/1-rss-o-2.rss
+2024-12-16 18:00:11,566 - article_processor - INFO - Processing feed: https://www.hsw.pl/feed/
+2024-12-16 18:00:11,739 - article_processor - INFO - Processing feed: https://politepol.com/fd/CGvZ0xwzWc9F.xml
+2024-12-16 18:00:11,886 - article_processor - INFO - Processing feed: https://www.bankier.pl/rss/wiadomosci.xml
+2024-12-16 18:00:12,457 - article_processor - INFO - Processing feed: http://rss.dziennik.pl/Dziennik-PL/
+2024-12-16 18:00:12,615 - article_processor - INFO - Processing feed: https://forsal.pl/.feed
+2024-12-16 18:00:12,968 - article_processor - INFO - Processing feed: http://rss.gazetaprawna.pl/GazetaPrawna
+2024-12-16 18:00:13,164 - article_processor - INFO - Processing feed: https://www.rp.pl/rss/1019
+2024-12-16 18:00:13,359 - article_processor - INFO - Processing feed: https://www.rp.pl/rss/11-kraj
+2024-12-16 18:00:14,131 - article_processor - INFO - Processing feed: https://feeds.feedburner.com/wPolitycepl
+2024-12-16 18:00:14,263 - article_processor - INFO - Processing feed: https://tvn24.pl/najnowsze.xml
+2024-12-16 18:00:14,967 - article_processor - INFO - Processing feed: https://www.newsweek.pl/rss.xml
+2024-12-16 18:00:15,107 - article_processor - INFO - Processing feed: https://www.polsatnews.pl/rss/wszystkie.xml
+2024-12-16 18:00:15,253 - article_processor - INFO - Processing feed: https://www.polsatnews.pl/rss/kraj.xml
+2024-12-16 18:00:15,380 - article_processor - INFO - Processing feed: https://www.rmf24.pl/feed
+2024-12-16 18:00:20,004 - article_processor - INFO - Successfully processed and saved article: https://www.rmf24.pl/regiony/bialystok/news-wstrzasajacy-wypadek-k-nowowoli-policja-apeluje-do-swiadkow,nId,7876532
+2024-12-16 18:00:21,180 - article_processor - INFO - Processing feed: https://politepol.com/fd/rXWWVpuDzKxX.xml
+2024-12-16 18:00:21,489 - article_processor - INFO - Processing feed: https://politepol.com/fd/1HxW1FCnF1sA.xml
+2024-12-16 18:00:24,761 - article_processor - INFO - Successfully processed and saved article: https://www.polskieradio.pl/5/1222/Artykul/3459883,kaczynski-grzmi-po-decyzji-pkw-zlamanie-prawa
+2024-12-16 18:00:25,883 - article_processor - INFO - Processing feed: https://wiadomosci.wp.pl/rss.xml
+2024-12-16 18:00:29,568 - article_processor - INFO - Successfully processed and saved article: https://wiadomosci.wp.pl/bedzie-wniosek-o-ukaranie-strozny-nie-stawil-sie-przed-komisja-7103959961156352a
+2024-12-16 18:00:33,618 - article_processor - INFO - Successfully processed and saved article: https://wiadomosci.wp.pl/glos-amerykanow-ws-tvn-media-musza-zostac-wolne-7103950799985376a
+2024-12-16 18:00:37,217 - article_processor - INFO - Successfully processed and saved article: https://wiadomosci.wp.pl/imgw-ostrzega-wiatr-bedzie-sie-wzmagal-7103947047025376a
+2024-12-16 18:00:40,669 - article_processor - INFO - Successfully processed and saved article: https://wiadomosci.wp.pl/polacy-niezadowoleni-z-sankcji-wobec-rosji-miazdzace-oceny-7103898967108352a
+2024-12-16 18:00:47,786 - article_processor - INFO - Successfully processed and saved article: https://wiadomosci.wp.pl/s/lublin112-pl/4-latek-nie-zostal-przyjety-na-oddzial-i-zmarl-lekarka-nie-przyznaje-sie-do-winy-7103955988577024a
+2024-12-16 18:00:52,102 - article_processor - INFO - Successfully processed and saved article: https://wiadomosci.wp.pl/zolnierz-przywiazany-do-krzyza-skandal-w-ukrainskiej-armii-7103950678416096a
+2024-12-16 18:00:53,421 - article_processor - INFO - Processing feed: https://www.wirtualnemedia.pl/rss/wirtualnemedia_rss.xml
+2024-12-16 18:01:02,329 - article_processor - INFO - Successfully processed and saved article: https://www.wirtualnemedia.pl/artykul/michal-adamczyk-wiadomosci-tvp-jacek-kurski-pozew-sadowy
+2024-12-16 18:01:03,471 - article_processor - INFO - Processing feed: https://wyborcza.pl/pub/rss/gazetawyborcza_kraj.xml
+2024-12-16 18:01:05,718 - article_processor - INFO - Processing feed: https://politepol.com/fd/EgW0phrfwRFg
+2024-12-16 18:01:06,003 - article_processor - INFO - Processing feed: https://warsawnow.pl/feed/
+2024-12-16 18:01:09,713 - article_processor - INFO - Successfully processed and saved article: https://warsawnow.pl/daria-zawialow-na-wystawie-budowli-z-klockow-lego/
+2024-12-16 18:01:11,458 - article_processor - INFO - Processing feed: http://www.tvp.info/tvp.info/rss+xml.php
+2024-12-16 18:01:14,882 - article_processor - INFO - Successfully processed and saved article: http://www.tvp.info/84052782/wielka-brytania-skandal-w-rodzinie-krolewskiej-ksiaze-andrzej-nie-wezmie-udzialu-w-uroczystosciach-swiatecznych
+2024-12-16 18:01:20,188 - article_processor - INFO - Successfully processed and saved article: http://www.tvp.info/84053803/tomasz-arabski-byly-szef-w-kancelarii-donalda-tuska-uniewinniony-w-sprawie-organizacji-lotow-do-smolenska-co-zrobil-tomasz-arabski
+2024-12-16 18:01:24,147 - article_processor - INFO - Successfully processed and saved article: http://www.tvp.info/84052771/dymisja-dariusza-wieczorka-wszystkie-wpadki-ministra-nauki-donald-tusk-rozmawia-z-wlodzimierzem-czarzastym
