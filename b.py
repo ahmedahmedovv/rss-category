@@ -23,8 +23,8 @@ def load_articles_from_supabase():
 def upload_to_supabase_storage(feed_content: str, filename: str):
     """Upload RSS feed content to Supabase storage"""
     try:
-        # Create a temporary file
-        with tempfile.NamedTemporaryFile(mode='w+', delete=False, suffix='.xml') as tmp_file:
+        # Create a temporary file with UTF-8 encoding
+        with tempfile.NamedTemporaryFile(mode='w+', delete=False, suffix='.xml', encoding='utf-8') as tmp_file:
             # Write content to temporary file
             tmp_file.write(feed_content)
             tmp_file.flush()
@@ -32,11 +32,11 @@ def upload_to_supabase_storage(feed_content: str, filename: str):
 
         try:
             # Upload the temporary file to Supabase storage
-            with open(tmp_path, 'rb') as f:
+            with open(tmp_path, 'rb') as f:  # Note: using 'rb' mode for binary reading
                 response = supabase.storage.from_('rss-feeds').upload(
                     path=filename,
                     file=f,
-                    file_options={"content-type": "application/xml"}
+                    file_options={"content-type": "application/xml; charset=utf-8"}
                 )
             print(f"Successfully uploaded {filename} to Supabase storage")
             return response
