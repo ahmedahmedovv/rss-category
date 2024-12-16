@@ -1,7 +1,0 @@
-aiohttp
-aiofiles
-supabase==1.2.0
-feedparser
-backoff
-python-dotenv
-pyyaml==6.0.1
