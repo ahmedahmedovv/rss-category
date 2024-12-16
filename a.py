@@ -103,8 +103,10 @@ async def fetch_and_translate_feeds(url_file):
         try:
             feed = feedparser.parse(url)
             
-            if feed.entries:
-                latest_entry = feed.entries[0]
+            # Get the last 2 entries instead of just the first one
+            latest_entries = feed.entries[:2]
+            
+            for latest_entry in latest_entries:
                 article_url = latest_entry.get('link', '')
                 
                 if article_url in existing_urls:
