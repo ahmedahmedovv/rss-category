@@ -25,10 +25,10 @@ def load_config():
 
 CONFIG = load_config()
 
-# Initialize Supabase client with direct credentials
+# Initialize Supabase client with config values
 supabase: Client = create_client(
-    'https://vyfeecfsnvjanhzaojvq.supabase.co',
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ5ZmVlY2ZzbnZqYW5oemFvanZxIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTczNDM0MDExNywiZXhwIjoyMDQ5OTE2MTE3fQ.cBjja9V92dT0-QYmNfIXEgCU00vE91ZXEetTyc-dmBM'
+    CONFIG['supabase']['url'],
+    CONFIG['supabase']['key']
 )
 
 def clean_html(html_text):
@@ -104,7 +104,7 @@ async def fetch_and_translate_feeds(url_file):
             feed = feedparser.parse(url)
             
             # Get the last 2 entries instead of just the first one
-            latest_entries = feed.entries[:2]
+            latest_entries = feed.entries[:CONFIG['feed']['entries_to_fetch']]
             
             for latest_entry in latest_entries:
                 article_url = latest_entry.get('link', '')

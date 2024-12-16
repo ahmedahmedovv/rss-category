@@ -1,6 +1,15 @@
 # API Keys
 mistral_api_key: ${MISTRAL_API_KEY}
 
+# Database configuration
+supabase:
+  url: "https://vyfeecfsnvjanhzaojvq.supabase.co"
+  key: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ5ZmVlY2ZzbnZqYW5oemFvanZxIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTczNDM0MDExNywiZXhwIjoyMDQ5OTE2MTE3fQ.cBjja9V92dT0-QYmNfIXEgCU00vE91ZXEetTyc-dmBM"
+
+# Feed settings
+feed:
+  entries_to_fetch: 4
+
 # File paths
 data_folder: "data"
 articles_file: "articles.json"
@@ -18,7 +27,7 @@ mistral:
   prompt_template: |
     Based on this article content, please provide:
     1. A concise title (max 20 words)
-    2. A brief summary (max 100 words)
+    2. A long summary (max 100 words)
     3. A single category that best describes the article from this exact list only:
     Culture, Economy, Education, Environment, Health, International, Poland, Polish News, 
     Polish Military, Polish Defense, Polish Armed Forces, Polish Air Force, Polish Navy, 
