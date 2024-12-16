@@ -9,7 +9,7 @@ from mistralai.models import UserMessage
 
 async def main():
     api_key = os.environ["MISTRAL_API_KEY"]
-    model = "mistral-tiny"
+    model = "mistral-large-latest"
 
     client = Mistral(api_key=api_key)
 
