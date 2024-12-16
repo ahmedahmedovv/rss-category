@@ -1,5 +1,6 @@
 import logging
 import yaml
+import os
 
 def setup_logger(name):
     # Load config
@@ -10,8 +11,16 @@ def setup_logger(name):
     logger = logging.getLogger(name)
     logger.setLevel(config['logging']['level'])
     
+    # Ensure logs directory exists
+    log_path = config['logging']['file']
+    log_dir = os.path.dirname(log_path)
+    
+    # Create logs directory if it doesn't exist
+    if log_dir:
+        os.makedirs(log_dir, exist_ok=True)
+    
     # Create handlers
-    file_handler = logging.FileHandler(config['logging']['file'])
+    file_handler = logging.FileHandler(log_path)
     console_handler = logging.StreamHandler()
     
     # Create formatter

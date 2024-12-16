@@ -12,6 +12,8 @@ import os
 from supabase import create_client, Client
 from typing import List, Dict, Any
 from logger_config import setup_logger
+from dateutil import parser
+from dateutil.relativedelta import relativedelta
 
 # Load environment variables
 load_dotenv()
@@ -175,9 +177,31 @@ async def fetch_and_translate_feeds(url_file):
         except Exception as e:
             logger.error(f"Error processing {url}: {str(e)}", exc_info=True)
 
+def delete_old_articles():
+    """Delete articles older than one month"""
+    try:
+        # Calculate the date one month ago
+        one_month_ago = datetime.now() - relativedelta(months=1)
+        
+        # Delete articles older than one month
+        response = supabase.table('articles')\
+            .delete()\
+            .lt('created_at', one_month_ago.isoformat())\
+            .execute()
+            
+        deleted_count = len(response.data)
+        logger.info(f"Deleted {deleted_count} articles older than one month")
+        return deleted_count
+    except Exception as e:
+        logger.error(f"Error deleting old articles: {str(e)}")
+        return 0
+
 async def main():
+    # Delete old articles before processing new ones
+    delete_old_articles()
+    
     await fetch_and_translate_feeds(CONFIG['url_file'])
-    print("Article processing completed!")
+    logger.info("Article processing completed!")
 
 if __name__ == "__main__":
     asyncio.run(main())
