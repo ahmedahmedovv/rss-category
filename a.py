@@ -19,12 +19,13 @@ load_dotenv()
 # Add at the top after imports
 logger = setup_logger('article_processor')
 
+# Add this line after load_dotenv():
+MISTRAL_API_KEY = os.getenv('MISTRAL_API_KEY')
+
 def load_config():
     """Load configuration from yaml file"""
     with open('config.yaml', 'r') as f:
         config = yaml.safe_load(f)
-        # Replace environment variables
-        config['mistral_api_key'] = os.getenv(config['mistral_api_key'].replace('${', '').replace('}', ''))
     return config
 
 CONFIG = load_config()
@@ -65,7 +66,7 @@ def save_article(article: Dict[str, Any]):
 
 async def get_ai_analysis(content, max_retries=3):
     """Get AI-generated title, summary, and category with retry logic"""
-    client = Mistral(api_key=CONFIG['mistral_api_key'])
+    client = Mistral(api_key=MISTRAL_API_KEY)
     
     for attempt in range(max_retries):
         try:

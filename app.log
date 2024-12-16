@@ -156,3 +156,171 @@
 2024-12-16 14:01:55,190 - article_processor - INFO - Successfully processed and saved article: https://www.rp.pl/transport/art41586421-ciasno-na-lotnisku-chopina-wizz-air-w-2025-r-doda-milion-miejsc-w-samolotach
 2024-12-16 14:02:03,258 - article_processor - INFO - Successfully processed and saved article: https://www.rp.pl/dobra-osobiste/art41586641-ojciec-tadeusz-rydzyk-wytoczyl-proces-tvn-za-reportaz-na-jego-temat
 2024-12-16 14:02:09,416 - article_processor - INFO - Successfully processed and saved article: https://www.rp.pl/prawo-w-polsce/art41586681-dotacja-dla-pis-nadal-pod-znakiem-zapytania-pkw-odracza-obrady
+2024-12-16 14:02:15,798 - article_processor - INFO - Successfully processed and saved article: https://www.rp.pl/media/art41586651-kolejny-chetny-na-tvn-spadkobiercy-silvio-berlusconiego-szukaja-okazji-w-europie
+2024-12-16 14:02:17,103 - article_processor - INFO - Processing feed: https://www.rp.pl/rss/11-kraj
+2024-12-16 14:02:17,951 - article_processor - INFO - Processing feed: https://feeds.feedburner.com/wPolitycepl
+2024-12-16 14:02:18,234 - article_processor - INFO - Processing feed: https://tvn24.pl/najnowsze.xml
+2024-12-16 14:02:24,501 - article_processor - INFO - Successfully processed and saved article: https://tvn24.pl/kujawsko-pomorskie/wloclawek-sluzby-szukaly-po-miescie-losi-mlody-loszak-przeplacil-wizyte-zyciem-st8224422?source=rss
+2024-12-16 14:02:29,452 - article_processor - INFO - Successfully processed and saved article: https://tvn24.pl/poznan/zimowe-zmiany-na-a2-pod-poznaniem-co-musza-wiedziec-kierowcy-st8224022?source=rss
+2024-12-16 14:02:34,347 - article_processor - INFO - Successfully processed and saved article: https://tvn24.pl/tvnwarszawa/srodmiescie/warszawa-w-centrum-odkryto-mury-dawnego-szpitala-dzieciatka-jezus-st8224002?source=rss
+2024-12-16 14:02:38,146 - article_processor - INFO - Successfully processed and saved article: https://tvn24.pl/lublin/lublin-inni-sie-zatrzymali-on-jechal-dalej-pieszy-na-szczescie-w-pore-odskoczyl-jest-nagranie-st8224383?source=rss
+2024-12-16 14:02:45,185 - article_processor - INFO - Successfully processed and saved article: https://tvn24.pl/trojmiasto/gdansk-54-rocznica-grudnia-70-st8224095?source=rss
+2024-12-16 14:02:46,474 - article_processor - INFO - Processing feed: https://www.newsweek.pl/rss.xml
+2024-12-16 14:02:46,785 - article_processor - INFO - Processing feed: https://www.polsatnews.pl/rss/wszystkie.xml
+2024-12-16 14:02:47,035 - article_processor - INFO - Processing feed: https://www.polsatnews.pl/rss/kraj.xml
+2024-12-16 14:02:47,282 - article_processor - INFO - Processing feed: https://www.rmf24.pl/feed
+2024-12-16 14:02:52,092 - article_processor - INFO - Successfully processed and saved article: https://www.rmf24.pl/regiony/poznan/news-zraca-substancja-w-szkole-we-wrzesni-zarzadzono-ewakuacje,nId,7876370
+2024-12-16 14:02:54,100 - article_processor - INFO - Processing feed: https://politepol.com/fd/rXWWVpuDzKxX.xml
+2024-12-16 14:02:55,750 - article_processor - INFO - Processing feed: https://politepol.com/fd/1HxW1FCnF1sA.xml
+2024-12-16 14:02:59,639 - article_processor - INFO - Successfully processed and saved article: https://www.polskieradio.pl/5/1222/Artykul/3459762,pkw-odroczyla-obrady-ws-subwencji-pis
+2024-12-16 14:03:00,827 - article_processor - INFO - Processing feed: https://wiadomosci.wp.pl/rss.xml
+2024-12-16 14:03:06,085 - article_processor - INFO - Successfully processed and saved article: https://wiadomosci.wp.pl/minister-narobil-glupot-rzecznik-musial-odejsc-fala-komentarzy-7103908806617856a
+2024-12-16 14:03:13,454 - article_processor - INFO - Successfully processed and saved article: https://wiadomosci.wp.pl/s/kryminalki-pl/ukradl-matce-poloneza-i-ruszyl-w-pijacki-rajd-problemy-27-latka-7103911767829216a
+2024-12-16 14:03:18,251 - article_processor - INFO - Successfully processed and saved article: https://wiadomosci.wp.pl/solorz-skomentowal-propozycje-tuska-ws-polsatu-i-tvn-7103908682185440a
+2024-12-16 14:03:19,662 - article_processor - INFO - Processing feed: https://www.wirtualnemedia.pl/rss/wirtualnemedia_rss.xml
+2024-12-16 14:03:19,843 - article_processor - INFO - Processing feed: https://wyborcza.pl/pub/rss/gazetawyborcza_kraj.xml
+2024-12-16 14:03:22,400 - article_processor - INFO - Processing feed: https://politepol.com/fd/EgW0phrfwRFg
+2024-12-16 14:03:22,681 - article_processor - INFO - Processing feed: https://warsawnow.pl/feed/
+2024-12-16 14:03:23,082 - article_processor - INFO - Processing feed: http://www.tvp.info/tvp.info/rss+xml.php
+2024-12-16 14:03:27,122 - article_processor - INFO - Successfully processed and saved article: http://www.tvp.info/84050195/pis-bez-pieniedzy-pkw-podjela-decyzje
+2024-12-16 14:03:31,375 - article_processor - INFO - Successfully processed and saved article: http://www.tvp.info/84050025/lotnisku-chopina-warszawa-pasazer-zazartowal-o-trotylu-straz-graniczna-nalozyla-mandat-nie-polecial-do-rzeszowa
+2024-12-16 14:03:38,281 - main - INFO - Starting article processing...
+2024-12-16 14:03:38,709 - article_processor - INFO - Starting to process feeds from url.md
+2024-12-16 14:03:39,098 - article_processor - INFO - Processing feed: https://notesfrompoland.com/feed/
+2024-12-16 14:03:39,896 - article_processor - INFO - Processing feed: https://politepol.com/fd/b8Ymwy4PRsNS.xml
+2024-12-16 14:03:40,186 - article_processor - INFO - Processing feed: https://politepol.com/fd/aN6R8Je2fUr5.xml
+2024-12-16 14:03:40,465 - article_processor - INFO - Processing feed: https://politepol.com/fd/1jNMAkmHDN1t.xml
+2024-12-16 14:03:40,753 - article_processor - INFO - Processing feed: https://politepol.com/fd/21fLEtcxQnMj.xml
+2024-12-16 14:03:41,057 - article_processor - INFO - Processing feed: https://politepol.com/fd/eQQIMEUlFKuU.xml
+2024-12-16 14:03:41,352 - article_processor - INFO - Processing feed: https://politepol.com/fd/o3jNxZcrpo6w.xml
+2024-12-16 14:03:41,621 - article_processor - INFO - Processing feed: https://politepol.com/fd/3F3XvYFg1X1A.xml
+2024-12-16 14:03:42,926 - article_processor - INFO - Processing feed: https://politepol.com/fd/TWSNDgA2UrNC.xml
+2024-12-16 14:03:43,231 - article_processor - INFO - Processing feed: https://politepol.com/fd/vyPArJmbermO.xml
+2024-12-16 14:03:43,484 - article_processor - INFO - Processing feed: https://politepol.com/fd/M0YpTDNrnk8x.xml
+2024-12-16 14:03:43,748 - article_processor - INFO - Processing feed: https://politepol.com/fd/2oeBhN2Jpeze.xml
+2024-12-16 14:03:44,014 - article_processor - INFO - Processing feed: https://politepol.com/fd/Fltoq0tmu5kT.xml
+2024-12-16 14:03:44,262 - article_processor - INFO - Processing feed: https://cyberdefence24.pl/_rss
+2024-12-16 14:03:44,509 - article_processor - INFO - Processing feed: https://defence24.pl/_RSS
+2024-12-16 14:03:44,770 - article_processor - INFO - Processing feed: https://defence24.com/_rss
+2024-12-16 14:03:45,033 - article_processor - INFO - Processing feed: https://infosecurity24.pl/_rss
+2024-12-16 14:03:45,299 - article_processor - INFO - Processing feed: https://politepol.com/fd/yMSQPMdW0A9d.xml
+2024-12-16 14:03:45,590 - article_processor - INFO - Processing feed: https://politepol.com/fd/lcvYRMYRE3w6.xml
+2024-12-16 14:03:45,902 - article_processor - INFO - Processing feed: https://politepol.com/fd/AaRUDelNy6uI
+2024-12-16 14:03:46,169 - article_processor - INFO - Processing feed: https://politepol.com/fd/RlZWWeOugzID
+2024-12-16 14:03:46,444 - article_processor - INFO - Processing feed: https://politepol.com/fd/QQ8y0MnyJ0Ps
+2024-12-16 14:03:46,727 - article_processor - INFO - Processing feed: https://politepol.com/fd/iYfzPnaF5k65
+2024-12-16 14:03:47,015 - article_processor - INFO - Processing feed: https://en.bbn.gov.pl/dokumenty/rss/3-rss-1.rss
+2024-12-16 14:03:47,264 - article_processor - INFO - Processing feed: https://politepol.com/fd/iv5sCQcuO3FS.xml
+2024-12-16 14:03:47,538 - article_processor - INFO - Processing feed: https://politepol.com/fd/MwtfzNppMdxB.xml
+2024-12-16 14:03:47,882 - article_processor - INFO - Processing feed: https://politepol.com/fd/CXRVrjJo0Hke.xml
+2024-12-16 14:03:48,153 - article_processor - INFO - Processing feed: https://politepol.com/fd/KLAJSBnC3xN9
+2024-12-16 14:03:48,464 - article_processor - INFO - Processing feed: https://politepol.com/fd/hNhzL30PEO6F
+2024-12-16 14:03:48,740 - article_processor - INFO - Processing feed: https://politepol.com/fd/TrPmJjWZRYMt
+2024-12-16 14:03:49,008 - article_processor - INFO - Processing feed: https://politepol.com/fd/IsSOz2U7LAph.xml
+2024-12-16 14:03:49,424 - article_processor - INFO - Processing feed: https://politepol.com/fd/9thDHqAHZGjx.xml
+2024-12-16 14:03:49,764 - article_processor - INFO - Processing feed: https://politepol.com/fd/ZCxuP2YN7S3A.xml
+2024-12-16 14:03:50,028 - article_processor - INFO - Processing feed: https://politepol.com/fd/vz8QmzNtATRF
+2024-12-16 14:03:50,259 - article_processor - INFO - Processing feed: https://www.wnp.pl/rss/serwis_rss_13.xml
+2024-12-16 14:03:50,895 - article_processor - INFO - Processing feed: https://dziennikzbrojny.pl/rss
+2024-12-16 14:03:51,149 - article_processor - INFO - Processing feed: https://politepol.com/fd/W3LsgnhkgSuX.xml
+2024-12-16 14:03:51,429 - article_processor - INFO - Processing feed: https://www.bbn.gov.pl/dokumenty/rss/1-rss-o-2.rss
+2024-12-16 14:03:52,184 - article_processor - INFO - Processing feed: https://www.hsw.pl/feed/
+2024-12-16 14:03:52,437 - article_processor - INFO - Processing feed: https://politepol.com/fd/CGvZ0xwzWc9F.xml
+2024-12-16 14:03:52,660 - article_processor - INFO - Processing feed: https://www.bankier.pl/rss/wiadomosci.xml
+2024-12-16 14:03:53,222 - article_processor - INFO - Processing feed: http://rss.dziennik.pl/Dziennik-PL/
+2024-12-16 14:03:53,538 - article_processor - INFO - Processing feed: https://forsal.pl/.feed
+2024-12-16 14:03:53,958 - article_processor - INFO - Processing feed: http://rss.gazetaprawna.pl/GazetaPrawna
+2024-12-16 14:03:54,263 - article_processor - INFO - Processing feed: https://www.rp.pl/rss/1019
+2024-12-16 14:03:54,553 - article_processor - INFO - Processing feed: https://www.rp.pl/rss/11-kraj
+2024-12-16 14:03:55,409 - article_processor - INFO - Processing feed: https://feeds.feedburner.com/wPolitycepl
+2024-12-16 14:03:55,714 - article_processor - INFO - Processing feed: https://tvn24.pl/najnowsze.xml
+2024-12-16 14:04:04,192 - article_processor - WARNING - Incomplete AI analysis, retrying... (attempt 1)
+2024-12-16 14:04:06,689 - article_processor - INFO - Successfully processed and saved article: https://tvn24.pl/wroclaw/komorow-duzy-pozar-hali-produkcyjnej-prokuratura-wszczyna-sledztwo-st8212649?source=rss
+2024-12-16 14:04:07,950 - article_processor - INFO - Processing feed: https://www.newsweek.pl/rss.xml
+2024-12-16 14:04:08,193 - article_processor - INFO - Processing feed: https://www.polsatnews.pl/rss/wszystkie.xml
+2024-12-16 14:04:08,465 - article_processor - INFO - Processing feed: https://www.polsatnews.pl/rss/kraj.xml
+2024-12-16 14:04:08,665 - article_processor - INFO - Processing feed: https://www.rmf24.pl/feed
+2024-12-16 14:04:08,932 - article_processor - INFO - Processing feed: https://politepol.com/fd/rXWWVpuDzKxX.xml
+2024-12-16 14:04:09,220 - article_processor - INFO - Processing feed: https://politepol.com/fd/1HxW1FCnF1sA.xml
+2024-12-16 14:04:09,393 - article_processor - INFO - Processing feed: https://wiadomosci.wp.pl/rss.xml
+2024-12-16 14:04:09,725 - article_processor - INFO - Processing feed: https://www.wirtualnemedia.pl/rss/wirtualnemedia_rss.xml
+2024-12-16 14:04:09,891 - article_processor - INFO - Processing feed: https://wyborcza.pl/pub/rss/gazetawyborcza_kraj.xml
+2024-12-16 14:04:10,160 - article_processor - INFO - Processing feed: https://politepol.com/fd/EgW0phrfwRFg
+2024-12-16 14:04:10,350 - article_processor - INFO - Processing feed: https://warsawnow.pl/feed/
+2024-12-16 14:04:10,656 - article_processor - INFO - Processing feed: http://www.tvp.info/tvp.info/rss+xml.php
+2024-12-16 14:04:13,105 - article_processor - INFO - Successfully processed and saved article: http://www.tvp.info/84050032/dom-brittany-murphy-i-britney-spears-wystawiony-na-sprzedaz
+2024-12-16 14:04:14,107 - main - INFO - Waiting 2 seconds before RSS generation...
+2024-12-16 14:04:16,108 - main - INFO - Starting RSS feed generation...
+2024-12-16 14:04:16,109 - rss_generator - INFO - Loading articles from Supabase
+2024-12-16 14:04:16,776 - rss_generator - INFO - Successfully loaded 403 articles
+2024-12-16 14:04:17,460 - rss_generator - INFO - Uploading international.xml to Supabase storage
+2024-12-16 14:04:18,135 - rss_generator - INFO - Successfully uploaded international.xml
+2024-12-16 14:04:18,438 - rss_generator - INFO - Uploading polish_news.xml to Supabase storage
+2024-12-16 14:04:19,165 - rss_generator - INFO - Successfully uploaded polish_news.xml
+2024-12-16 14:04:19,531 - rss_generator - INFO - Uploading culture.xml to Supabase storage
+2024-12-16 14:04:20,021 - rss_generator - INFO - Successfully uploaded culture.xml
+2024-12-16 14:04:20,306 - rss_generator - INFO - Uploading polish_regional_news.xml to Supabase storage
+2024-12-16 14:04:20,892 - rss_generator - INFO - Successfully uploaded polish_regional_news.xml
+2024-12-16 14:04:21,214 - rss_generator - INFO - Uploading health.xml to Supabase storage
+2024-12-16 14:04:21,880 - rss_generator - INFO - Successfully uploaded health.xml
+2024-12-16 14:04:22,191 - rss_generator - INFO - Uploading economy.xml to Supabase storage
+2024-12-16 14:04:22,678 - rss_generator - INFO - Successfully uploaded economy.xml
+2024-12-16 14:04:22,949 - rss_generator - INFO - Uploading world_news.xml to Supabase storage
+2024-12-16 14:04:23,687 - rss_generator - INFO - Successfully uploaded world_news.xml
+2024-12-16 14:04:23,937 - rss_generator - INFO - Uploading polish_domestic_policy.xml to Supabase storage
+2024-12-16 14:04:24,603 - rss_generator - INFO - Successfully uploaded polish_domestic_policy.xml
+2024-12-16 14:04:24,894 - rss_generator - INFO - Uploading politics.xml to Supabase storage
+2024-12-16 14:04:25,421 - rss_generator - INFO - Successfully uploaded politics.xml
+2024-12-16 14:04:25,790 - rss_generator - INFO - Uploading polish_security_forces.xml to Supabase storage
+2024-12-16 14:04:26,369 - rss_generator - INFO - Successfully uploaded polish_security_forces.xml
+2024-12-16 14:04:26,638 - rss_generator - INFO - Uploading security.xml to Supabase storage
+2024-12-16 14:04:27,466 - rss_generator - INFO - Successfully uploaded security.xml
+2024-12-16 14:04:27,733 - rss_generator - INFO - Uploading polish_foreign_policy.xml to Supabase storage
+2024-12-16 14:04:28,489 - rss_generator - INFO - Successfully uploaded polish_foreign_policy.xml
+2024-12-16 14:04:28,841 - rss_generator - INFO - Uploading polish_defense.xml to Supabase storage
+2024-12-16 14:04:29,508 - rss_generator - INFO - Successfully uploaded polish_defense.xml
+2024-12-16 14:04:29,799 - rss_generator - INFO - Uploading polish_army.xml to Supabase storage
+2024-12-16 14:04:30,508 - rss_generator - INFO - Successfully uploaded polish_army.xml
+2024-12-16 14:04:30,822 - rss_generator - INFO - Uploading polish_military.xml to Supabase storage
+2024-12-16 14:04:31,611 - rss_generator - INFO - Successfully uploaded polish_military.xml
+2024-12-16 14:04:31,987 - rss_generator - INFO - Uploading polish_politics.xml to Supabase storage
+2024-12-16 14:04:32,514 - rss_generator - INFO - Successfully uploaded polish_politics.xml
+2024-12-16 14:04:32,849 - rss_generator - INFO - Uploading entertainment.xml to Supabase storage
+2024-12-16 14:04:33,497 - rss_generator - INFO - Successfully uploaded entertainment.xml
+2024-12-16 14:04:34,077 - rss_generator - INFO - Uploading polish_air_force.xml to Supabase storage
+2024-12-16 14:04:34,826 - rss_generator - INFO - Successfully uploaded polish_air_force.xml
+2024-12-16 14:04:35,245 - rss_generator - INFO - Uploading sports.xml to Supabase storage
+2024-12-16 14:04:35,915 - rss_generator - INFO - Successfully uploaded sports.xml
+2024-12-16 14:04:36,328 - rss_generator - INFO - Uploading polish_economy.xml to Supabase storage
+2024-12-16 14:04:37,071 - rss_generator - INFO - Successfully uploaded polish_economy.xml
+2024-12-16 14:04:37,438 - rss_generator - INFO - Uploading education.xml to Supabase storage
+2024-12-16 14:04:38,225 - rss_generator - INFO - Successfully uploaded education.xml
+2024-12-16 14:04:38,543 - rss_generator - INFO - Uploading business.xml to Supabase storage
+2024-12-16 14:04:39,197 - rss_generator - INFO - Successfully uploaded business.xml
+2024-12-16 14:04:39,488 - rss_generator - INFO - Uploading history.xml to Supabase storage
+2024-12-16 14:04:39,957 - rss_generator - INFO - Successfully uploaded history.xml
+2024-12-16 14:04:40,240 - rss_generator - INFO - Uploading society.xml to Supabase storage
+2024-12-16 14:04:40,945 - rss_generator - INFO - Successfully uploaded society.xml
+2024-12-16 14:04:41,205 - rss_generator - INFO - Uploading crime.xml to Supabase storage
+2024-12-16 14:04:41,833 - rss_generator - INFO - Successfully uploaded crime.xml
+2024-12-16 14:04:42,104 - rss_generator - INFO - Uploading polish_armed_forces.xml to Supabase storage
+2024-12-16 14:04:42,775 - rss_generator - INFO - Successfully uploaded polish_armed_forces.xml
+2024-12-16 14:04:43,008 - rss_generator - INFO - Uploading polish_navy.xml to Supabase storage
+2024-12-16 14:04:43,563 - rss_generator - INFO - Successfully uploaded polish_navy.xml
+2024-12-16 14:04:43,862 - rss_generator - INFO - Uploading environment.xml to Supabase storage
+2024-12-16 14:04:44,555 - rss_generator - INFO - Successfully uploaded environment.xml
+2024-12-16 14:04:44,827 - rss_generator - INFO - Uploading defense.xml to Supabase storage
+2024-12-16 14:04:45,452 - rss_generator - INFO - Successfully uploaded defense.xml
+2024-12-16 14:04:45,715 - rss_generator - INFO - Uploading weather.xml to Supabase storage
+2024-12-16 14:04:46,388 - rss_generator - INFO - Successfully uploaded weather.xml
+2024-12-16 14:04:46,683 - rss_generator - INFO - Uploading transportation.xml to Supabase storage
+2024-12-16 14:04:47,355 - rss_generator - INFO - Successfully uploaded transportation.xml
+2024-12-16 14:04:47,642 - rss_generator - INFO - Uploading polish_history.xml to Supabase storage
+2024-12-16 14:04:48,301 - rss_generator - INFO - Successfully uploaded polish_history.xml
+2024-12-16 14:04:48,582 - rss_generator - INFO - Uploading finance.xml to Supabase storage
+2024-12-16 14:04:49,267 - rss_generator - INFO - Successfully uploaded finance.xml
+2024-12-16 14:04:49,536 - rss_generator - INFO - Uploading polish_intelligence.xml to Supabase storage
+2024-12-16 14:04:50,089 - rss_generator - INFO - Successfully uploaded polish_intelligence.xml
+2024-12-16 14:04:50,343 - rss_generator - INFO - Uploading science.xml to Supabase storage
+2024-12-16 14:04:51,095 - rss_generator - INFO - Successfully uploaded science.xml
+2024-12-16 14:04:51,097 - main - INFO - All operations completed successfully!

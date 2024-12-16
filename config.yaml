@@ -1,5 +1,4 @@
-# API Keys
-mistral_api_key: ${MISTRAL_API_KEY}
+
 
 # Database configuration
 supabase:
@@ -8,7 +7,7 @@ supabase:
 
 # Feed settings
 feed:
-  entries_to_fetch: 5
+  entries_to_fetch: 6
 
 # File paths
 data_folder: "data"
