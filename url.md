@@ -1,3 +1,5 @@
+https://www.tygodnikpowszechny.pl/rss.xml
+https://myslpolska.info/feed
 https://i.pl/rss
 https://dorzeczy.pl/feed
 https://dorzeczy.pl/feed/kraj
