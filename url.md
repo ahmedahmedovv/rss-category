@@ -1,3 +1,5 @@
+https://dorzeczy.pl/feed
+https://dorzeczy.pl/feed/kraj
 https://wiadomosci.gazeta.pl/pub/rss/wiadomosci.htm
 https://notesfrompoland.com/feed/
 https://politepol.com/fd/b8Ymwy4PRsNS.xml
