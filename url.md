@@ -1,3 +1,4 @@
+https://wiadomosci.gazeta.pl/pub/rss/wiadomosci.htm
 https://notesfrompoland.com/feed/
 https://politepol.com/fd/b8Ymwy4PRsNS.xml
 https://politepol.com/fd/aN6R8Je2fUr5.xml
