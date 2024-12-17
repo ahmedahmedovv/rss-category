@@ -1,7 +1,7 @@
 
 # Feed settings
 feed:
-  entries_to_fetch: 50
+  entries_to_fetch: 75
 
 # File paths
 data_folder: "data"
