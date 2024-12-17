@@ -1,3 +1,4 @@
+https://i.pl/rss
 https://dorzeczy.pl/feed
 https://dorzeczy.pl/feed/kraj
 https://wiadomosci.gazeta.pl/pub/rss/wiadomosci.htm
