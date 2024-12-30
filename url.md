@@ -1,3 +1,4 @@
+https://www.fakt.pl/?rss
 https://www.tygodnikpowszechny.pl/rss.xml
 https://myslpolska.info/feed
 https://i.pl/rss
