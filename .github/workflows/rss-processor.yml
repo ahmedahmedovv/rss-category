@@ -13,6 +13,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
+      with:
+        ref: together
 
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -23,6 +25,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+        pip install together
 
     - name: Create logs directory
       run: |
@@ -31,7 +34,7 @@ jobs:
 
     - name: Run RSS processor
       env:
-        MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+        TOGETHER_API_KEY: ${{ secrets.TOGETHER_API_KEY }}
         SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
         SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
       run: python main.py
