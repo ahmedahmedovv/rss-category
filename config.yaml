@@ -1,4 +1,3 @@
-
 # Feed settings
 feed:
   entries_to_fetch: 100
@@ -14,9 +13,9 @@ translator:
   target: "en"
   delay: 1
 
-# Mistral AI settings
-mistral:
-  model: "mistral-large-latest"
+# Together AI settings
+together:
+  model: "Qwen/QwQ-32B-Preview"
   prompt_template: |
     Based on this article content, please provide:
     1. A concise title (max 20 words)

@@ -3,7 +3,7 @@ from deep_translator import GoogleTranslator
 from datetime import datetime
 import time
 from bs4 import BeautifulSoup
-from mistralai import Mistral
+from together import Together
 from mistralai.models import UserMessage
 import asyncio
 from dotenv import load_dotenv
@@ -68,18 +68,18 @@ def save_article(article: Dict[str, Any]):
 
 async def get_ai_analysis(content, max_retries=3):
     """Get AI-generated title, summary, and category with retry logic"""
-    client = Mistral(api_key=MISTRAL_API_KEY)
+    client = Together()
     
     for attempt in range(max_retries):
         try:
-            prompt = CONFIG['mistral']['prompt_template'].format(content=content)
+            prompt = CONFIG['together']['prompt_template'].format(content=content)
             
-            chat_response = await client.chat.complete_async(
-                model=CONFIG['mistral']['model'],
-                messages=[UserMessage(content=prompt)],
+            response = client.chat.completions.create(
+                model=CONFIG['together']['model'],
+                messages=[{"role": "user", "content": prompt}]
             )
             
-            response_text = chat_response.choices[0].message.content
+            response_text = response.choices[0].message.content
             
             # Parse the response
             title = ""
