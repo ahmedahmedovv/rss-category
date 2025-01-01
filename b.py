@@ -75,7 +75,11 @@ def create_category_feeds(articles):
         fg = FeedGenerator()
         fg.title(f'News - {category}')
         fg.description(f'News articles related to {category}')
-        fg.link(href=f'https://vyfeecfsnvjanhzaojvq.supabase.co/storage/v1/object/public/rss-feeds/{category.lower()}.xml')
+        
+        # Replace underscores with hyphens for the filename
+        filename = f'{category.lower().replace(" ", "-").replace("_", "-")}.xml'
+        fg.link(href=f'https://vyfeecfsnvjanhzaojvq.supabase.co/storage/v1/object/public/rss-feeds/{filename}')
+        
         fg.language('en')
 
         # Add entries to feed
@@ -102,8 +106,6 @@ def create_category_feeds(articles):
         feed_content = fg.rss_str(pretty=True).decode('utf-8')
         
         # Upload to Supabase storage
-        filename = f'{category.lower().replace(" ", "_")}.xml'
-        
         # Try to delete existing file first (ignore errors)
         try:
             supabase.storage.from_('rss-feeds').remove([filename])
