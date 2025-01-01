@@ -1,6 +1,6 @@
 # Feed settings
 feed:
-  entries_to_fetch: 5
+  entries_to_fetch: 10
 
 # File paths
 url_file: "url.md"
@@ -25,7 +25,7 @@ ollama:
     Based on this article content, please provide:
     1. A concise title (max 20 words)
     2. A long summary (max 100 words)
-    3. A single category that best describes the article from this exact list only (you must choose exactly ONE category from categories_config.yaml):
+    3. A single category that best describes the article from this exact list only (you must choose exactly ONE category from this list: Culture, Economy, Education, Environment, Health, International, Poland, Polish-News, Polish-Military, Polish-Defense, Polish-Armed-Forces, Polish-Air-Force, Polish-Navy, Polish-Army, Polish-Security-Forces, Polish-Intelligence, Polish-Foreign-Policy, Polish-Domestic-Policy, Polish-Regional-News, Polish-Economy, Polish-Politics, Poland-NATO, Poland-EU, Poland-USA, Poland-Russia, Politics, Science, Security, Society, Sports, Technology, Business, Entertainment, Finance, Weather, World-News, Crime, Transportation, Travel, History):
 
     CRITICAL RULES FOR CATEGORY SELECTION:
     - You MUST select EXACTLY ONE category - no exceptions!
