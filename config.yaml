@@ -32,23 +32,24 @@ ollama:
     Security, Society, Sports, Technology, Business, Entertainment, Finance, Weather, 
     World-News, Crime, Transportation, Travel, History
 
-    CRITICAL RULES:
-    - Choose EXACTLY ONE category from the list above
-    - Always use hyphens (-) in the category name
-    - Never use underscores (_) or spaces
-    - Do not combine categories or create new ones
-    - Do not add commas or additional text to the category
+    CRITICAL RULES FOR CATEGORY SELECTION:
+    - You MUST select EXACTLY ONE category - no exceptions!
+    - If content fits multiple categories, choose the MOST specific ONE
+    - DO NOT use commas or list multiple categories
+    - DO NOT add any explanatory text
+    - DO NOT create new categories
+    - DO NOT combine categories
 
     Examples:
     CORRECT: CATEGORY: Polish-Military
-    WRONG: CATEGORY: Polish-Military, Military Cooperation
-    WRONG: CATEGORY: Polish Military
-    WRONG: CATEGORY: Polish_Military
+    WRONG: CATEGORY: Polish-Military, Politics
+    WRONG: CATEGORY: Polish-Military and Defense
+    WRONG: CATEGORY: Polish-Military (with political aspects)
 
-    Format your response exactly like this:
+    Your response MUST follow this EXACT format:
     TITLE: [your title]
     SUMMARY: [your summary]
-    CATEGORY: [exactly one category from the list above]
+    CATEGORY: [EXACTLY ONE category from the list - no commas, no explanations]
 
     Article content:
     {content}
