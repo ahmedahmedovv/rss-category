@@ -5,11 +5,15 @@ import pytz
 import tempfile
 import os
 from logger_config import setup_logger
+from dotenv import load_dotenv
 
-# Initialize Supabase client
+# Load environment variables
+load_dotenv()
+
+# Initialize Supabase client with environment variables
 supabase: Client = create_client(
-    'https://vyfeecfsnvjanhzaojvq.supabase.co',
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ5ZmVlY2ZzbnZqYW5oemFvanZxIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTczNDM0MDExNywiZXhwIjoyMDQ5OTE2MTE3fQ.cBjja9V92dT0-QYmNfIXEgCU00vE91ZXEetTyc-dmBM'
+    os.getenv('SUPABASE_URL'),
+    os.getenv('SUPABASE_KEY')
 )
 
 # Add at the top after imports

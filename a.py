@@ -13,12 +13,19 @@ from logger_config import setup_logger
 from dateutil import parser
 from dateutil.relativedelta import relativedelta
 import requests
+from rich.console import Console
+from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TimeRemainingColumn
+from rich.panel import Panel
+from rich import print as rprint
 
 # Load environment variables
 load_dotenv()
 
 # Add at the top after imports
 logger = setup_logger('article_processor')
+
+# Initialize Rich console
+console = Console()
 
 def load_config():
     """Load configuration from yaml file"""
@@ -119,7 +126,6 @@ async def get_ai_analysis(content, max_retries=3):
 async def fetch_and_translate_feeds(url_file):
     """Fetch articles from RSS feeds and translate them"""
     existing_urls = load_existing_articles()
-    logger.info(f"Starting to process feeds from {url_file}")
     
     with open(url_file, 'r') as file:
         urls = [line.strip() for line in file if line.strip()]
@@ -129,83 +135,115 @@ async def fetch_and_translate_feeds(url_file):
         target=CONFIG['translator']['target']
     )
     
-    for url in urls:
-        try:
-            feed = feedparser.parse(url)
-            logger.info(f"Processing feed: {url}")
-            
-            # Get the last 2 entries instead of just the first one
-            latest_entries = feed.entries[:CONFIG['feed']['entries_to_fetch']]
-            
-            for latest_entry in latest_entries:
-                article_url = latest_entry.get('link', '')
+    # Create progress display
+    with Progress(
+        SpinnerColumn(),
+        TextColumn("[bold blue]{task.description}"),
+        BarColumn(),
+        TextColumn("[progress.percentage]{task.percentage:>3.0f}%"),
+        TimeRemainingColumn(),
+        console=console
+    ) as progress:
+        
+        # Main feed processing task
+        feed_task = progress.add_task(f"[yellow]Processing feeds...", total=len(urls))
+        
+        for url in urls:
+            try:
+                console.print(f"\n[cyan]Processing feed:[/cyan] [green]{url}[/green]")
+                feed = feedparser.parse(url)
                 
-                if article_url in existing_urls:
-                    logger.debug(f"Skipping (already exists): {article_url}")
-                    continue
+                # Get the last entries
+                latest_entries = feed.entries[:CONFIG['feed']['entries_to_fetch']]
                 
-                # Extract and clean content
-                original_title = clean_html(latest_entry.get('title', ''))
-                original_description = clean_html(latest_entry.get('description', ''))
+                # Add subtask for current feed's entries
+                entry_task = progress.add_task(
+                    f"[blue]Processing articles from current feed...",
+                    total=len(latest_entries)
+                )
                 
-                try:
-                    translated_title = translator.translate(original_title)
-                    translated_description = translator.translate(original_description)
+                for latest_entry in latest_entries:
+                    article_url = latest_entry.get('link', '')
                     
-                    # Combine title and description for AI analysis
-                    combined_content = f"{translated_title}\n\n{translated_description}"
+                    if article_url in existing_urls:
+                        progress.print(f"[yellow]↺ Skipping (already exists):[/yellow] {article_url}")
+                        progress.advance(entry_task)
+                        continue
                     
-                    # Get AI analysis
-                    ai_title, ai_summary, ai_category = await get_ai_analysis(combined_content)
-                    
-                except Exception as e:
-                    print(f"Translation/AI error: {str(e)}")
-                    continue
+                    try:
+                        # Extract and clean content
+                        original_title = clean_html(latest_entry.get('title', ''))
+                        original_description = clean_html(latest_entry.get('description', ''))
+                        
+                        progress.print("[bold green]Translating content...")
+                        translated_title = translator.translate(original_title)
+                        translated_description = translator.translate(original_description)
+                        
+                        # Combine title and description for AI analysis
+                        combined_content = f"{translated_title}\n\n{translated_description}"
+                        
+                        # Get AI analysis
+                        progress.print("[bold green]Getting AI analysis...")
+                        ai_title, ai_summary, ai_category = await get_ai_analysis(combined_content)
+                        
+                        article = {
+                            'original_title': translated_title,
+                            'original_description': translated_description,
+                            'ai_title': ai_title,
+                            'ai_summary': ai_summary,
+                            'ai_category': ai_category,
+                            'link': article_url,
+                            'published': latest_entry.get('published', ''),
+                            'source_url': url
+                        }
+                        
+                        # Save to Supabase
+                        save_article(article)
+                        progress.print(f"[green]✓ Processed:[/green] {ai_title}")
+                        
+                    except Exception as e:
+                        progress.print(f"[red]✗ Error processing article:[/red] {str(e)}")
+                        
+                    progress.advance(entry_task)
+                    time.sleep(CONFIG['translator']['delay'])
                 
-                article = {
-                    'original_title': translated_title,
-                    'original_description': translated_description,
-                    'ai_title': ai_title,
-                    'ai_summary': ai_summary,
-                    'ai_category': ai_category,
-                    'link': article_url,
-                    'published': latest_entry.get('published', ''),
-                    'source_url': url
-                }
+                progress.remove_task(entry_task)
+                progress.advance(feed_task)
                 
-                # Save to Supabase
-                save_article(article)
-                logger.info(f"Successfully processed and saved article: {article_url}")
-                time.sleep(CONFIG['translator']['delay'])
-            
-        except Exception as e:
-            logger.error(f"Error processing {url}: {str(e)}", exc_info=True)
+            except Exception as e:
+                progress.print(f"[red]✗ Error processing feed {url}:[/red] {str(e)}")
+                progress.advance(feed_task)
 
 def delete_old_articles():
     """Delete articles older than one month"""
-    try:
-        # Calculate the date one month ago
-        one_month_ago = datetime.now() - relativedelta(months=1)
-        
-        # Delete articles older than one month
-        response = supabase.table('articles')\
-            .delete()\
-            .lt('created_at', one_month_ago.isoformat())\
-            .execute()
+    with console.status("[bold yellow]Deleting old articles...") as status:
+        try:
+            one_month_ago = datetime.now() - relativedelta(months=1)
             
-        deleted_count = len(response.data)
-        logger.info(f"Deleted {deleted_count} articles older than one month")
-        return deleted_count
-    except Exception as e:
-        logger.error(f"Error deleting old articles: {str(e)}")
-        return 0
+            response = supabase.table('articles')\
+                .delete()\
+                .lt('created_at', one_month_ago.isoformat())\
+                .execute()
+                
+            deleted_count = len(response.data)
+            console.print(f"[green]✓ Deleted {deleted_count} old articles[/green]")
+            return deleted_count
+        except Exception as e:
+            console.print(f"[red]✗ Error deleting old articles: {str(e)}[/red]")
+            return 0
 
 async def main():
+    console.print(Panel.fit(
+        "[bold blue]RSS Feed Processor[/bold blue]\n"
+        "[cyan]Starting article processing...[/cyan]"
+    ))
+    
     # Delete old articles before processing new ones
     delete_old_articles()
     
     await fetch_and_translate_feeds(CONFIG['url_file'])
-    logger.info("Article processing completed!")
+    
+    console.print("\n[bold green]✓ Article processing completed![/bold green]")
 
 if __name__ == "__main__":
     asyncio.run(main())
