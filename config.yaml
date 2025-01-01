@@ -13,9 +13,15 @@ translator:
   target: "en"
   delay: 1
 
-# Together AI settings
-together:
-  model: "Qwen/QwQ-32B-Preview"
+# Logging configuration
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/app.log"
+
+# Ollama settings
+ollama:
+  model: "phi3.5"
   prompt_template: |
     Based on this article content, please provide:
     1. A concise title (max 20 words)
@@ -35,9 +41,3 @@ together:
 
     Article content:
     {content}
-
-# Logging configuration
-logging:
-  level: "INFO"
-  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-  file: "logs/app.log"

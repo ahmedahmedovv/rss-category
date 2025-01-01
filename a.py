@@ -3,8 +3,6 @@ from deep_translator import GoogleTranslator
 from datetime import datetime
 import time
 from bs4 import BeautifulSoup
-from together import Together
-from mistralai.models import UserMessage
 import asyncio
 from dotenv import load_dotenv
 import yaml
@@ -14,15 +12,13 @@ from typing import List, Dict, Any
 from logger_config import setup_logger
 from dateutil import parser
 from dateutil.relativedelta import relativedelta
+import requests
 
 # Load environment variables
 load_dotenv()
 
 # Add at the top after imports
 logger = setup_logger('article_processor')
-
-# Add this line after load_dotenv():
-MISTRAL_API_KEY = os.getenv('MISTRAL_API_KEY')
 
 def load_config():
     """Load configuration from yaml file"""
@@ -67,19 +63,28 @@ def save_article(article: Dict[str, Any]):
         return None
 
 async def get_ai_analysis(content, max_retries=3):
-    """Get AI-generated title, summary, and category with retry logic"""
-    client = Together()
+    """Get AI-generated title, summary, and category using Ollama Phi-3.5"""
     
     for attempt in range(max_retries):
         try:
-            prompt = CONFIG['together']['prompt_template'].format(content=content)
+            # Prepare the request to local Ollama server
+            url = "http://localhost:11434/api/generate"
             
-            response = client.chat.completions.create(
-                model=CONFIG['together']['model'],
-                messages=[{"role": "user", "content": prompt}]
-            )
+            # Use the ollama section from config instead of together
+            prompt = CONFIG['ollama']['prompt_template'].format(content=content)
             
-            response_text = response.choices[0].message.content
+            payload = {
+                "model": CONFIG['ollama']['model'],
+                "prompt": prompt,
+                "stream": False
+            }
+            
+            # Make request to Ollama
+            response = requests.post(url, json=payload)
+            response.raise_for_status()
+            
+            # Extract response text
+            response_text = response.json()['response']
             
             # Parse the response
             title = ""
@@ -94,14 +99,13 @@ async def get_ai_analysis(content, max_retries=3):
                 elif line.startswith('CATEGORY:'):
                     category = line.replace('CATEGORY:', '').strip()
             
-            # Validate that we have all required fields
+            # Validate response
             if not all([title, summary, category]):
                 if attempt < max_retries - 1:
                     logger.warning(f"Incomplete AI analysis, retrying... (attempt {attempt + 1})")
                     continue
                 else:
                     logger.error("Failed to get complete AI analysis after all retries")
-                    # Provide default summary if still empty
                     if not summary:
                         summary = "Summary not available"
             
