@@ -76,8 +76,13 @@ def create_category_feeds(articles):
         fg.title(f'News - {category}')
         fg.description(f'News articles related to {category}')
         
-        # Replace underscores with hyphens for the filename
-        filename = f'{category.lower().replace(" ", "-").replace("_", "-")}.xml'
+        # Fix: Replace both spaces, underscores, and forward slashes with hyphens
+        filename = f'{category.lower().replace(" ", "-").replace("_", "-").replace("/", "-")}.xml'
+        
+        # Ensure no double hyphens
+        while '--' in filename:
+            filename = filename.replace('--', '-')
+            
         fg.link(href=f'https://vyfeecfsnvjanhzaojvq.supabase.co/storage/v1/object/public/rss-feeds/{filename}')
         
         fg.language('en')
