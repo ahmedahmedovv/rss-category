@@ -26,7 +26,7 @@ ollama:
     Based on this article content, please provide:
     1. A concise title (max 20 words)
     2. A long summary (max 100 words)
-    3. A single category that best describes the article from this exact list only:
+    3. A single category that best describes the article from this exact list only (you must choose exactly ONE category):
     Culture, Economy, Education, Environment, Health, International, Poland, Polish-News, 
     Polish-Military, Polish-Defense, Polish-Armed-Forces, Polish-Air-Force, Polish-Navy, 
     Polish-Army, Polish-Security-Forces, Polish-Intelligence, Polish-Foreign-Policy, 
@@ -34,10 +34,23 @@ ollama:
     Security, Society, Sports, Technology, Business, Entertainment, Finance, Weather, 
     World-News, Crime, Transportation, Travel, History
 
+    CRITICAL RULES:
+    - Choose EXACTLY ONE category from the list above
+    - Always use hyphens (-) in the category name
+    - Never use underscores (_) or spaces
+    - Do not combine categories or create new ones
+    - Do not add commas or additional text to the category
+
+    Examples:
+    CORRECT: CATEGORY: Polish-Military
+    WRONG: CATEGORY: Polish-Military, Military Cooperation
+    WRONG: CATEGORY: Polish Military
+    WRONG: CATEGORY: Polish_Military
+
     Format your response exactly like this:
     TITLE: [your title]
     SUMMARY: [your summary]
-    CATEGORY: [select exactly one category from the list above]
+    CATEGORY: [exactly one category from the list above]
 
     Article content:
     {content}
