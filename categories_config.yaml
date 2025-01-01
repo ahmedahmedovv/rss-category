@@ -1,0 +1,37 @@
+# Available categories for article classification
+categories:
+  - Culture
+  - Economy
+  - Education
+  - Environment
+  - Health
+  - International
+  - Poland
+  - Polish-News
+  - Polish-Military
+  - Polish-Defense
+  - Polish-Armed-Forces
+  - Polish-Air-Force
+  - Polish-Navy
+  - Polish-Army
+  - Polish-Security-Forces
+  - Polish-Intelligence
+  - Polish-Foreign-Policy
+  - Polish-Domestic-Policy
+  - Polish-Regional-News
+  - Polish-Economy
+  - Politics
+  - Science
+  - Security
+  - Society
+  - Sports
+  - Technology
+  - Business
+  - Entertainment
+  - Finance
+  - Weather
+  - World-News
+  - Crime
+  - Transportation
+  - Travel
+  - History 

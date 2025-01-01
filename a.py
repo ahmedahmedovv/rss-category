@@ -69,8 +69,19 @@ def save_article(article: Dict[str, Any]):
         print(f"Error saving article: {str(e)}")
         return None
 
+def load_categories() -> set:
+    """Load valid categories from categories_config.yaml"""
+    try:
+        with open(CONFIG['ollama']['categories_file'], 'r') as f:
+            categories_config = yaml.safe_load(f)
+            return set(categories_config['categories'])
+    except Exception as e:
+        logger.error(f"Error loading categories: {str(e)}")
+        return set()
+
 async def get_ai_analysis(content, max_retries=3):
-    """Get AI-generated title, summary, and category using Ollama Phi-3.5"""
+    """Get AI-generated title, summary, and category using Ollama"""
+    valid_categories = load_categories()
     
     for attempt in range(max_retries):
         try:
@@ -105,6 +116,15 @@ async def get_ai_analysis(content, max_retries=3):
                     summary = line.replace('SUMMARY:', '').strip()
                 elif line.startswith('CATEGORY:'):
                     category = line.replace('CATEGORY:', '').strip()
+            
+            # Validate category
+            if category not in valid_categories:
+                logger.warning(f"Invalid category '{category}' received from AI")
+                if attempt < max_retries - 1:
+                    logger.info("Retrying with the same content...")
+                    continue
+                else:
+                    raise ValueError(f"AI provided invalid category after {max_retries} attempts: {category}")
             
             # Validate response
             if not all([title, summary, category]):
