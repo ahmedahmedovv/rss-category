@@ -1,6 +1,6 @@
 # Feed settings
 feed:
-  entries_to_fetch: 50
+  entries_to_fetch: 100
 
 # File paths
 url_file: "url.md"

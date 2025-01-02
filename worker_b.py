@@ -32,11 +32,11 @@ def main():
     """Main worker function"""
     console.print(Panel.fit(
         "[bold blue]RSS Feed Generator Worker[/bold blue]\n"
-        "[cyan]Worker started. Will run every minute.[/cyan]"
+        "[cyan]Worker started. Will run every 10 minutes.[/cyan]"
     ))
     
-    # Schedule the job to run every minute
-    schedule.every(1).minutes.do(job)
+    # Schedule the job to run every 10 minutes
+    schedule.every(10).minutes.do(job)
     
     # Run the job immediately on startup
     job()
