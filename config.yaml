@@ -19,7 +19,7 @@ logging:
 
 # Ollama settings
 ollama:
-  model: "falcon3:3b"
+  model: "llama3.2"
   categories_file: "categories_config.yaml"
   prompt_template: |
     Based on this article content, please provide:
